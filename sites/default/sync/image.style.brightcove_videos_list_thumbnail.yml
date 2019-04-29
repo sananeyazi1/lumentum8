@@ -1,0 +1,17 @@
+uuid: 93cfd649-6d60-4ade-87e0-7e8650d28225
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: TJJtEaOvYde08g-vZxJmKXJl-VJjjbnCGAbak28vy5Y
+name: brightcove_videos_list_thumbnail
+label: 'Brightcove Videos list thumbnail'
+effects:
+  c5f45224-6710-4023-a377-449acc3b2468:
+    uuid: c5f45224-6710-4023-a377-449acc3b2468
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 68
+      height: 45
+      anchor: center-center

@@ -1,0 +1,19 @@
+uuid: f12219c2-c53d-4638-b6cc-a57dbf4eab1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_caption
+    - paragraphs.paragraphs_type.taxonomy_banner
+id: paragraph.taxonomy_banner.field_banner_caption
+field_name: field_banner_caption
+entity_type: paragraph
+bundle: taxonomy_banner
+label: 'Banner Caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

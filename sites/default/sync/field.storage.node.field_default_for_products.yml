@@ -1,0 +1,19 @@
+uuid: d07b4229-3ac7-4608-abb2-9aed8c5426b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_default_for_products
+field_name: field_default_for_products
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

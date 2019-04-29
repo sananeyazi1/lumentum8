@@ -1,0 +1,29 @@
+uuid: 69abb1bc-9b1b-4a39-9cd4-a25ee11bae0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_applications_category
+    - node.type.award_and_recognition
+    - taxonomy.vocabulary.applications
+id: node.award_and_recognition.field_applications_category
+field_name: field_applications_category
+entity_type: node
+bundle: award_and_recognition
+label: 'Applications Category'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      applications: applications
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

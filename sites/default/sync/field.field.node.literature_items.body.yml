@@ -1,0 +1,22 @@
+uuid: a325d009-7a86-4111-8c2b-cf92c87e9f5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.literature_items
+  module:
+    - text
+id: node.literature_items.body
+field_name: body
+entity_type: node
+bundle: literature_items
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

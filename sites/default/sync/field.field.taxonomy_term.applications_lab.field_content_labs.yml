@@ -1,0 +1,21 @@
+uuid: a437b845-27e4-458f-8c27-f0cf2e052542
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_content_labs
+    - taxonomy.vocabulary.applications_lab
+  module:
+    - text
+id: taxonomy_term.applications_lab.field_content_labs
+field_name: field_content_labs
+entity_type: taxonomy_term
+bundle: applications_lab
+label: 'Content labs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

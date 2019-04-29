@@ -1,0 +1,47 @@
+uuid: c6798229-915b-429c-ac5d-d637a0dc3095
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.office_location.body
+    - field.field.node.office_location.field_geocode
+    - field.field.node.office_location.field_location
+    - node.type.office_location
+  module:
+    - address
+    - geolocation
+    - text
+    - user
+id: node.office_location.default
+targetEntityType: node
+bundle: office_location
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_geocode:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+    region: content
+  field_location:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

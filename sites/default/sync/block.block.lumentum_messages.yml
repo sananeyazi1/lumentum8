@@ -1,0 +1,22 @@
+uuid: b29547a0-da28-49cf-9cd7-efa086c28bbd
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - lumentum
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: lumentum_messages
+theme: lumentum
+region: sys_impo
+weight: -9
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

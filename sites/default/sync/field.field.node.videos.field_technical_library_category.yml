@@ -1,0 +1,29 @@
+uuid: ef8c5ea1-1454-4454-bc77-b6bb5d46898d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_technical_library_category
+    - node.type.videos
+    - taxonomy.vocabulary.technical_library
+id: node.videos.field_technical_library_category
+field_name: field_technical_library_category
+entity_type: node
+bundle: videos
+label: 'Technical Library Category'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      technical_library: technical_library
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

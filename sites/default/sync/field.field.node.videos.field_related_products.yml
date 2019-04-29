@@ -1,0 +1,25 @@
+uuid: 205357ac-fc9f-4d82-b42b-b1322484268a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_products
+    - node.type.videos
+id: node.videos.field_related_products
+field_name: field_related_products
+entity_type: node
+bundle: videos
+label: Products
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: adminstration_products
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: 7b07b3c2-14ad-4373-a356-80723db74885
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.webform_confirmation_page
+  module:
+    - text
+id: node.webform_confirmation_page.body
+field_name: body
+entity_type: node
+bundle: webform_confirmation_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

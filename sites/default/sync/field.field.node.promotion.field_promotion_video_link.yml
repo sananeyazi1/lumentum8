@@ -1,0 +1,28 @@
+uuid: 76a70d8d-d127-4543-967a-e54d78ae850a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotion_video_link
+    - node.type.promotion
+    - node.type.videos
+id: node.promotion.field_promotion_video_link
+field_name: field_promotion_video_link
+entity_type: node
+bundle: promotion
+label: 'Promotion Video Link'
+description: 'This will display brightcove video in pop up'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      videos: videos
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

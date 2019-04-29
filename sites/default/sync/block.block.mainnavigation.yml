@@ -1,0 +1,20 @@
+uuid: 8d4772be-38f1-4b20-8037-b987345e46ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - we_megamenu
+  theme:
+    - lumentum
+id: mainnavigation
+theme: lumentum
+region: header
+weight: -7
+provider: null
+plugin: 'we_megamenu_block:main'
+settings:
+  id: 'we_megamenu_block:main'
+  label: 'Main navigation'
+  provider: we_megamenu
+  label_display: '0'
+visibility: {  }

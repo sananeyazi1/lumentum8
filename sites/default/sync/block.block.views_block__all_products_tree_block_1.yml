@@ -1,0 +1,30 @@
+uuid: 2d25301a-d2d7-426b-bbcd-fbc4db6420c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.all_products_tree
+  module:
+    - system
+    - views
+  theme:
+    - lumentum
+id: views_block__all_products_tree_block_1
+theme: lumentum
+region: content
+weight: -10
+provider: null
+plugin: 'views_block:all_products_tree-block_1'
+settings:
+  id: 'views_block:all_products_tree-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /commercaial-lasers/all-products
+    negate: false
+    context_mapping: {  }

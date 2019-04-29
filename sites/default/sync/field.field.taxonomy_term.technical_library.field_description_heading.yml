@@ -1,0 +1,19 @@
+uuid: a3f4c9f8-e584-4043-a858-6b22bac6ffd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_description_heading
+    - taxonomy.vocabulary.technical_library
+id: taxonomy_term.technical_library.field_description_heading
+field_name: field_description_heading
+entity_type: taxonomy_term
+bundle: technical_library
+label: 'Description Heading'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: dcd45a89-7a3d-4398-a1fb-a880e606d6c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.custom_landing_page_with_banner
+id: node.custom_landing_page_with_banner.promote
+field_name: promote
+entity_type: node
+bundle: custom_landing_page_with_banner
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

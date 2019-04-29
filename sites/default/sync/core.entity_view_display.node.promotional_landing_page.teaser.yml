@@ -1,0 +1,31 @@
+uuid: acdd4feb-c2a6-45a0-93fb-ca221f2023a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.promotional_landing_page.body
+    - node.type.promotional_landing_page
+  module:
+    - text
+    - user
+id: node.promotional_landing_page.teaser
+targetEntityType: node
+bundle: promotional_landing_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

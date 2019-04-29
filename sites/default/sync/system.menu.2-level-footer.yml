@@ -1,0 +1,8 @@
+uuid: fdadf63d-8472-4259-afa8-85e7e1488abc
+langcode: en
+status: true
+dependencies: {  }
+id: 2-level-footer
+label: '2 level Footer'
+description: ''
+locked: false

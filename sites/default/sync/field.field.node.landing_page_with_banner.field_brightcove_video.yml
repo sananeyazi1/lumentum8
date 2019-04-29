@@ -1,0 +1,26 @@
+uuid: f5194d06-be4a-4414-8924-622120f660dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_brightcove_video
+    - node.type.landing_page_with_banner
+id: node.landing_page_with_banner.field_brightcove_video
+field_name: field_brightcove_video
+entity_type: node
+bundle: landing_page_with_banner
+label: 'Brightcove Video'
+description: 'Enter your video here if your page contains video, if no, please leave as it is'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:brightcove_video'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: player
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

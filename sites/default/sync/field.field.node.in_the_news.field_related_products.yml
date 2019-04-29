@@ -1,0 +1,25 @@
+uuid: df9bb9cf-7454-4a7d-80c0-a381a71bb9ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_products
+    - node.type.in_the_news
+id: node.in_the_news.field_related_products
+field_name: field_related_products
+entity_type: node
+bundle: in_the_news
+label: Products
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: adminstration_products
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

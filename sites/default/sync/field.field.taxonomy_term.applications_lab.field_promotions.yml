@@ -1,0 +1,28 @@
+uuid: 3cfb509c-854c-4d33-8c2d-a36c41035c53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_promotions
+    - node.type.promotion
+    - taxonomy.vocabulary.applications_lab
+id: taxonomy_term.applications_lab.field_promotions
+field_name: field_promotions
+entity_type: taxonomy_term
+bundle: applications_lab
+label: Promotions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      promotion: promotion
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: banner_slider
+field_type: entity_reference

@@ -1,0 +1,28 @@
+uuid: 212282d5-c179-4a89-8248-b253f97c7f9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_default_technical_library
+    - node.type.product
+    - node.type.resource_center
+id: node.product.field_default_technical_library
+field_name: field_default_technical_library
+entity_type: node
+bundle: product
+label: 'Default Technical Library Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      resource_center: resource_center
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,11 @@
+uuid: d7ca2683-0f05-4246-a9df-08106728f3b0
+langcode: en
+status: false
+dependencies: {  }
+id: lumentum_brightcove
+label: Lumentum_Brightcove
+account_id: '4258237503001'
+client_id: 43c0e15b-47d5-44fb-8c7a-4d60cae22f01
+default_player: default
+secret_key: URVQFF5wf8ayVvfJLmBmikMjrz--WcghEO4HTMmjk_M_t9GEV_a0UxKzVpbayiC67hZ-rtIqA1B8ox-NkzYcYw
+max_custom_fields: 10

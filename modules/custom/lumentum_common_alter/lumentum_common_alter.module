@@ -1,0 +1,455 @@
+<?php
+use Drupal\file\Entity\File;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
+use Drupal\views\Views;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\lumentum_common_alter\Controller\LumentumAlterController;
+/**
+ * @file
+ * Contains lumentum_common_alter.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_preprocess_taxonomy_term().
+ */
+function lumentum_common_alter_preprocess_taxonomy_term(array &$variables){
+  /**
+   * System blocks such as breadcrumbs, messages and edit/modify/delete tabs
+   */
+  $term_breadcrumbs = \Drupal\block\Entity\Block::load('lumentum_breadcrumbs');
+  $variables['taxo_breadcrumbs'] = \Drupal::entityTypeManager()->getViewBuilder('block')->view($term_breadcrumbs);
+  
+  $term_messages = \Drupal\block\Entity\Block::load('lumentum_messages');
+  $variables['taxo_messages'] = \Drupal::entityTypeManager()->getViewBuilder('block')->view($term_messages);
+  
+  $term_local_tasks = \Drupal\block\Entity\Block::load('lumentum_local_tasks');
+  $variables['taxo_local_tasks'] = \Drupal::entityTypeManager()->getViewBuilder('block')->view($term_local_tasks);
+  
+  $aval_var = $variables['content'];
+  $variables['taxo_title'] = $variables['elements']['#taxonomy_term']->getName();
+  $vid = $variables['elements']['#taxonomy_term']->getVocabularyId();
+  $term_id = $variables['term']->id();
+//  if(!empty($aval_var['field_summary_image'][0])){
+//    $summar_img_arr = $aval_var['field_summary_image'][0]['#item']->getValue();
+//  
+//    if(!empty($summar_img_arr)){
+//      $file = File::load($summar_img_arr['target_id']);
+//      $summary_actual = ['alt'=> $summar_img_arr['alt'], 'title'=> $summar_img_arr['title'], 'img'=> file_create_url($file->getFileUri())];
+//    }
+//  }
+  
+  /**
+   * Taxonomy page banner on top of page.
+   */
+  if(!empty($aval_var['field_taxonomy_banner'][0])){
+    $para_id = $aval_var['field_taxonomy_banner'][0]['#paragraph']->id();
+    $para = Drupal\paragraphs\Entity\Paragraph::load($para_id);
+
+    if(!empty($para->field_banner_link->getValue())){
+      $par_link = Url::fromUri($para->field_banner_link->getValue()[0]['uri'], ['absolute'=> true]);
+      $banner_link = ['title'=> $para->field_banner_link->getValue()[0]['title'], 'uri'=> $par_link->toString()];
+    }
+    if(!empty($para->field_image->getValue())){
+      $file = File::load($para->field_image->getValue()[0]['target_id']);
+      $img_arr = ['alt'=> $para->field_image->getValue()[0]['alt'], 'title'=> $para->field_image->getValue()[0]['title'], 'img'=> file_create_url($file->getFileUri())];
+    }
+    
+    $para_arr = [
+      'banner_caption'=> !empty($para->field_banner_caption->getValue()) ? $para->field_banner_caption->getValue()[0]['value'] : '',
+      'banner_link'=> !empty($banner_link) ? $banner_link : '',
+      'imges_arr'=> @$img_arr
+    ];
+  }
+  
+  $variables['taxo_content'] = [
+    'vid'=> $vid,
+    //'summary_img'=> !empty($summary_actual) ? $summary_actual : '',
+    'taxonomy_banner'=> !empty($para_arr) ? $para_arr : '',
+    'contact'=> 'yes'
+  ];
+  
+  /** 
+   * Promotions view block 
+   */
+  if($vid == 'applications_lab'){
+    $avail = check_view_exists_get_title('promotions', 'block_1');
+    if(!empty($avail)){
+      $view_content = views_embed_view('promotions', $display_id = 'block_1', $term_id);
+      $variables['promotions_block'] = ['title'=> $avail, 'render'=> $view_content];
+    }
+    
+    /** literature_items view block */
+    $avail = check_view_exists_get_title('literature_items', 'block_1');
+    if(!empty($avail)){
+      $view_content1 = views_embed_view('literature_items', $display_id = 'block_1', $term_id);
+      if(!empty($view_content1)){
+        $variables['literature_items_block'] = ['render'=> $view_content1];
+      }
+    }
+  }
+  
+  if($vid == 'technical_library'){
+    $parent = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($term_id);
+    $parent = reset($parent);
+    if(!empty($parent)){
+      /**
+       * Technical Library Detail page*
+       * Render the view in a 8 Grid
+       */
+      if (in_array($term_id, [17, 19, 21])){
+        $avail = check_view_exists_get_title('videos', 'block_1');
+        if(!empty($avail)){
+          $variables['technical_library_block_depth'] = views_embed_view('videos', $display_id = 'block_1', $term_id);
+        }
+      }else if($term_id == 22){
+        $avail = check_view_exists_get_title('data_sheets_of_products_tree', 'block_1');
+        if(!empty($avail)){
+          $variables['technical_library_block_depth'] = views_embed_view('data_sheets_of_products_tree', $display_id = 'block_1', $term_id);
+        }
+      }else if($term_id == 23){
+        $avail = check_view_exists_get_title('data_sheets_of_products_tree', 'block_2');
+        if(!empty($avail)){
+          $variables['technical_library_block_depth'] = views_embed_view('data_sheets_of_products_tree', $display_id = 'block_2', $term_id);
+        }
+      }else if($term_id == 24){
+        $avail = check_view_exists_get_title('data_sheets_of_products_tree', 'block_3');
+        if(!empty($avail)){
+          $variables['technical_library_block_depth'] = views_embed_view('data_sheets_of_products_tree', $display_id = 'block_3', $term_id);
+        }
+      }else{
+        $avail = check_view_exists_get_title('technical_library_category', 'block_1');
+        if(!empty($avail)){
+          $variables['technical_library_block_depth'] = views_embed_view('technical_library_category', $display_id = 'block_1', $term_id);
+        }
+      }
+    }else{
+      $avail = check_view_exists_get_title('taxonomy_list_grid_view', 'block_1');
+      if(!empty($avail)){
+        $variables['technical_library_block'] = views_embed_view('taxonomy_list_grid_view', $display_id = 'block_1', $term_id);
+      }
+    }
+  }else{
+    $links = '';
+    $avail_block_check = check_view_data('taxonomy_list_grid_view', 'block_2', $term_id);
+    $avail_block = views_embed_view('taxonomy_list_grid_view', $display_id = 'block_2', $term_id);
+    
+    /** 
+     * Product Category
+     */
+    if(empty($avail_block_check) && $vid == 'products'){
+      $avail_block = views_embed_view('taxonomy_list_grid_view', $display_id = 'block_3', $term_id);
+    }
+    
+    /** 
+     * Applications Category
+     */
+    if(empty($avail_block_check) && $vid == 'applications'){
+      $avail_block = views_embed_view('taxonomy_list_grid_view', $display_id = 'block_4', $term_id);
+      $current_path = \Drupal::service('path.current')->getPath();
+      $path_args = explode('/', $current_path);
+      $links = products_custom_get_capability($path_args[3]);
+    }
+    if(!empty($avail_block) || !empty($links)){
+      $variables['product_block'] = [$avail_block, @$links];
+    }
+    $variables['product_block_all_link'] = custom_get_all_products_block($term_id);
+    
+    /**
+     * Related Content Section for Category Pages.
+     */
+    
+    if ($vid == 'products' || $vid == 'applications') {
+      /**
+       * Category Promotions block
+       * Title: Related Information
+       */
+      $variables['count_promo'] = check_view_data('promotions', 'block_2', $term_id);
+      $variables['promo_block_title'] = check_view_exists_get_title('promotions', 'block_2');
+      $variables['promo_block_view_content'] = views_embed_view('promotions', $display_id = 'block_2', $term_id);
+      
+      /**
+       * Technical library Category block
+       * Title: Tech Library - Not required
+       */
+      $variables['tech_count'] = check_view_data('technical_library_category', 'block_2', $term_id);
+      $variables['tech_block_view_content'] = views_embed_view('technical_library_category', $display_id = 'block_2', $term_id);
+      
+      /**
+       * Category News Releases block
+       * Title: News Releases
+       */
+      $variables['news_releases_count'] = check_view_data('news', 'block_4', $term_id);
+      $variables['news_releases_block_title'] = check_view_exists_get_title('news', 'block_4');
+      $variables['news_releases_block_view_content'] = views_embed_view('news', $display_id = 'block_4', $term_id);
+      
+      /**
+       * Latest News Releases block
+       * Title: In The News
+       */
+      $variables['latest_news_count'] = check_view_data('news', 'block_5', $term_id);
+      $variables['news_block_title'] = check_view_exists_get_title('news', 'block_5');
+      $variables['news_block_view_content'] = views_embed_view('news', $display_id = 'block_5', $term_id);
+      
+      /**
+       * Category Next Events block
+       * Title: Next Events
+       */
+      $variables['event_count'] = check_view_data('events', 'block_2', $term_id);
+      $variables['event_block_title'] = check_view_exists_get_title('events', 'block_2'); 
+      $variables['event_block_view_content'] = views_embed_view('events', $display_id = 'block_2', $term_id);
+
+    }
+  }
+  
+}
+
+
+function lumentum_common_alter_preprocess_node(array &$variables){
+  $content = $variables['content'];
+  $node = $variables['node'];
+  if($node->getType() == 'product'){
+    $model_arr = $node->get('field_model')->getValue();
+    if(!empty($model_arr)){
+      foreach ($model_arr as $model){
+        $model_reset[] = $model['value'];
+      }
+      $variables['model_li'] = implode(',', $model_reset);
+    }
+    
+    $default_technical_library_id = $node->get('field_default_technical_library')->getValue();
+    $default_technical_library_id = reset($default_technical_library_id)['target_id'];
+    if(!empty($default_technical_library_id)){
+      $node_data = \Drupal\node\Entity\Node::load($default_technical_library_id);
+      $file_val = $node_data->get('field_file')->getValue();
+      $file_id = reset($file_val);
+      $file_url = file_create_url(File::load($file_id['target_id'])->getFileUri());
+      $variables['default_technical_library'] = [$node_data->getTitle(), $file_url];
+    }
+    $product_category_id = $node->get('field_product_category')->getValue();
+    $product_category_id = reset($product_category_id)['target_id'];
+    if(!empty($product_category_id)){
+      $parent_id = get_parent_term($product_category_id);
+      $alias = \Drupal::service('path.alias_manager')->getAliasByPath('/taxonomy/term/'.$parent_id);
+      $variables['product_category'] = $alias;
+    }
+    
+    $technical_library = $node->get('field_technical_library')->getValue();
+    if(!empty($technical_library)){
+      $lumentum_controller = new LumentumAlterController;
+      $variables['technical_library'] = $lumentum_controller->get_related_info_product($node->id());
+    }
+    
+    $avail = check_view_exists_get_title('promotions', 'block_4');
+    if(!empty($avail)){
+      $res = check_view_data('promotions', 'block_4', $node->id());
+      $view_content = views_embed_view('promotions', $display_id = 'block_4', $node->id());
+      $variables['product_page_related_promo_block'] = [$res, $view_content];
+    }
+    
+    $avail = check_view_exists_get_title('related_products', 'block_1');
+    if(!empty($avail)){
+      $res1 = check_view_data('related_products', 'block_1', $node->id());
+      $view_content = views_embed_view('related_products', $display_id = 'block_1', $node->id());
+      $variables['product_page_related_products'] = [$res1, $view_content];
+    }
+    
+    $avail = check_view_exists_get_title('related_products', 'block_2');
+    if(!empty($avail)){
+      $res2 = check_view_data('related_products', 'block_2', $node->id());
+      $view_content = views_embed_view('related_products', $display_id = 'block_2', $node->id());
+      $variables['product_page_related_videos'] = [$res2, $view_content];
+    }
+    
+  }
+  
+  
+}
+
+/** Hook_preprocess_views_view_field 
+  * for alter view field data
+ */
+function lumentum_common_alter_preprocess_views_view_field(&$variables) {
+  $view = $variables['view'];
+  $field = $variables['field'];
+  if($view->id() == 'data_sheets_of_products_tree' && $view->current_display == 'block_1'){
+    $tid = $variables['row']->tid;
+    if ($field->field == 'nothing') {
+      $avail = check_view_exists_get_title('data_sheets', 'block_1');
+      if(!empty($avail)){
+        $variables['output'] = views_embed_view('data_sheets', $display_id = 'block_1', $tid);
+      }
+    }
+  }
+  
+  if($view->id() == 'data_sheets_of_products_tree' && $view->current_display == 'block_2'){
+    $tid = $variables['row']->tid;
+    if ($field->field == 'nothing') {
+      $avail = check_view_exists_get_title('data_sheets', 'block_2');
+      if(!empty($avail)){
+        $variables['output'] = views_embed_view('data_sheets', $display_id = 'block_2', $tid);
+      }
+    }
+  }
+  
+  if($view->id() == 'data_sheets_of_products_tree' && $view->current_display == 'block_3'){
+    $tid = $variables['row']->tid;
+    if ($field->field == 'nothing') {
+      $avail = check_view_exists_get_title('data_sheets', 'block_3');
+      if(!empty($avail)){
+        $variables['output'] = views_embed_view('data_sheets', $display_id = 'block_3', $tid);
+      }
+    }
+  }
+  
+  if($view->id() == 'all_products_tree'){
+    $tid = $variables['row']->tid;
+    if ($field->field == 'nothing') {
+      $avail = check_view_exists_get_title('product_listing', 'block_1');
+      if(!empty($avail)){
+        $variables['output'] = views_embed_view('product_listing', $display_id = 'block_1', $tid);
+      }
+    }
+  }
+  
+  if($view->id() == 'events' && $view->current_display == 'block_2'){
+    if ($field->field == 'views_conditional_field') {
+      $data = $field->original_value->render();
+      if(!empty($data)){
+        if(strpos($data, '[mdmjy]') !== false){
+          $data = explode(',', str_replace('[mdmjy]', '', $data));
+          $data1 = format_date(strtotime(trim($data[0])), 'custom', 'M d');
+          $variables['output'] = $data1.' - '.format_date(strtotime(trim($data[1])), 'custom', 'M j, Y');
+        }else{
+          $data = str_replace('[mjy]', '', $data);
+          $variables['output'] = format_date(strtotime(trim($data)), 'custom', 'M j, Y');
+        }
+      }
+    }
+  }
+  
+  if($view->id() == 'events' && $view->current_display == 'block_3'){
+    if ($field->field == 'views_conditional_field') {
+      $data = $field->original_value->render();
+      if(!empty($data)){
+        if(strpos($data, '[mdmjy]') !== false){
+          $data = explode(',', str_replace('[mdmjy]', '', $data));
+          $data1 = format_date(strtotime(trim($data[0])), 'custom', 'M d');
+          $variables['output'] = $data1.' - '.format_date(strtotime(trim($data[1])), 'custom', 'M j, Y');
+        }else{
+          $data = str_replace('[mjy]', '', $data);
+          $variables['output'] = format_date(strtotime(trim($data)), 'custom', 'M j, Y');
+        }
+      }
+    }
+  }
+}
+
+function check_view_exists_get_title($name, $display){
+  $view = Views::getView($name);
+  if($view){
+    $display_arr = $view->storage->get('display');
+    foreach ($display_arr as $value) {
+      if($value['display_plugin'] == 'block'){
+        $display_lists[] = $value['id'];
+      }
+    }
+    if(!empty($display_lists)){
+      if(in_array($display, $display_lists)){
+        $view->setDisplay($display);
+        return !empty($view->getTitle()) ? $view->getTitle() : 'no_title_found_pls_set_in_view';
+      }
+    }
+  }
+  
+}
+
+function check_view_data($name, $display, $args){  
+  $view = Views::getView($name);
+  $args = [$args];
+  if($view){
+    $display_arr = $view->storage->get('display');
+    foreach ($display_arr as $value) {
+      if($value['display_plugin'] == 'block'){
+        $display_lists[] = $value['id'];
+      }
+    }
+    if(!empty($display_lists)){
+      if(in_array($display, $display_lists)){
+        $view->setDisplay($display);
+        $view->setArguments($args);
+        $view->preExecute();
+        $view->execute();
+        return count($view->result);
+      }
+    }
+  }
+}
+
+function products_custom_get_capability($args){
+  $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($args);
+  $links = NULL;
+  $link = NULL;
+  if(!empty($term)){
+    $field_arr = $term->get('field_capabilities')->getValue();
+    if(!empty($field_arr)){
+      foreach ($field_arr as $value){
+        if(!empty($value['target_id'])){
+          $depth = get_parent_term($value['target_id']);
+          if(!empty($depth)){
+            $url = Url::fromUri('internal:'.'/taxonomy/term/'.$value['target_id'], ['absolute'=> true]);
+            $project_link = \Drupal::l(t(get_term_name($value['target_id'])), $url);
+            $link .= '<li>'.$project_link.'</li>';
+          }
+        }
+      }
+      if(!empty($link)){
+        $links = '<div class="capability-links main"><div class = "item-list"><ul>'.$link.'</ul></div></div>'; 
+      } 
+    }
+  }
+  return $links;
+}
+
+function get_parent_term($tid){
+  $parent = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($tid);
+  if(empty($parent)){
+    $term = Term::load($tid);
+    $parent = !empty($term) ? $tid : '';
+  }else{
+    $parent = reset($parent);
+    $parent = $parent->id();
+  }
+  return $parent;
+}
+
+function get_term_name($tid){
+  $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+  return $term->getName();
+}
+
+function custom_get_all_products_block($tid) {
+   if (!empty($tid)) {
+    $block = NULL;
+    $parent = get_parent_term($tid);
+    //Check the parent term, and which three markets it belongs
+    //Not a fan of hardcoding tids, but it seems to be a effective option here
+    //Optical Communications
+    if ($parent == 1) {
+      $block = Url::fromUri('internal:/optical-communications/all-products', ['absolute'=> true])->toString();
+    }
+    //Commercial Lasers
+    elseif ($parent == 27) {
+      $block = Url::fromUri('internal:/commercaial-lasers/all-products', ['absolute'=> true])->toString();
+    }
+    //Diode Lasers
+    elseif ($parent == 31) {
+      $block = Url::fromUri('internal:/diode-lasers/all-products', ['absolute'=> true])->toString();
+    }
+  }
+  return $block;
+}
+

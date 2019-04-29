@@ -1,0 +1,22 @@
+uuid: 6879f374-da59-4b42-ae39-415a4fb928b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.award_and_recognition
+  module:
+    - text
+id: node.award_and_recognition.body
+field_name: body
+entity_type: node
+bundle: award_and_recognition
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

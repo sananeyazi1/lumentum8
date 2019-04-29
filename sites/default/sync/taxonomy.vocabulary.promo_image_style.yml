@@ -1,0 +1,9 @@
+uuid: 86ccbe83-d472-4782-97e4-f44418fdf579
+langcode: en
+status: true
+dependencies: {  }
+name: 'Promo Image Style'
+vid: promo_image_style
+description: ''
+hierarchy: 0
+weight: -7

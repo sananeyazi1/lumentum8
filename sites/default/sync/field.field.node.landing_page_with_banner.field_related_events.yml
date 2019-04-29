@@ -1,0 +1,28 @@
+uuid: ed7a1253-a54c-4439-8992-3a667970c98d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_events
+    - node.type.event
+    - node.type.landing_page_with_banner
+id: node.landing_page_with_banner.field_related_events
+field_name: field_related_events
+entity_type: node
+bundle: landing_page_with_banner
+label: 'Related Events'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

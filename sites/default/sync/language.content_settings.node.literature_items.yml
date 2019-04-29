@@ -1,0 +1,11 @@
+uuid: f88ba27d-0b90-4fbd-b417-1ae65bb80e87
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.literature_items
+id: node.literature_items
+target_entity_type_id: node
+target_bundle: literature_items
+default_langcode: site_default
+language_alterable: false

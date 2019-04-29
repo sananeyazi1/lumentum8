@@ -1,0 +1,19 @@
+uuid: e2aacf74-7461-4ff2-b8c9-88b8c2d54f50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_software_firmware
+    - node.type.product
+id: node.product.field_software_firmware
+field_name: field_software_firmware
+entity_type: node
+bundle: product
+label: Software/Firmware
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,28 @@
+uuid: f6baadb9-5177-4a44-b7e1-63d2930e26e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_webform_confirmati
+    - node.type.webform_confirmation_page
+    - node.type.webform_pdf
+id: node.webform_pdf.field_related_webform_confirmati
+field_name: field_related_webform_confirmati
+entity_type: node
+bundle: webform_pdf
+label: 'Related Webform Confirmation Page'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      webform_confirmation_page: webform_confirmation_page
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

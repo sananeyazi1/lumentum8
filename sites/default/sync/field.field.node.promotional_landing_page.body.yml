@@ -1,0 +1,22 @@
+uuid: dc56058c-0e12-42ac-bfbe-edcc98972852
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.promotional_landing_page
+  module:
+    - text
+id: node.promotional_landing_page.body
+field_name: body
+entity_type: node
+bundle: promotional_landing_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

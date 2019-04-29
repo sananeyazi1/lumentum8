@@ -1,0 +1,21 @@
+name: Lumentum
+type: theme
+description: 'A well-designed, customized, responsive theme for lumentum.com'
+package: Lumentum
+core: 8.x
+libraries:
+  - lumentum/global-styling
+ 
+base theme: false
+
+regions:
+  header: Header
+  banner: Banner
+  sys_impo: System Important
+  befor_content: Before Content
+  content: Content
+  after_content: After Content
+  before_footer: Before Footer
+  footer: Footer
+  footer_bottom: Footer Bottom
+  megamenu_display: Disabled Block(Not render on pages)

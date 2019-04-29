@@ -1,0 +1,39 @@
+uuid: eedcdc9a-8aaf-4958-bf56-8714109b2a77
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.videos.body
+    - field.field.node.videos.field_brightcove_video
+    - field.field.node.videos.field_metatag
+    - field.field.node.videos.field_related_products
+    - field.field.node.videos.field_technical_library_category
+    - node.type.videos
+  module:
+    - text
+    - user
+id: node.videos.teaser
+targetEntityType: node
+bundle: videos
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_brightcove_video: true
+  field_metatag: true
+  field_related_products: true
+  field_technical_library_category: true
+  langcode: true

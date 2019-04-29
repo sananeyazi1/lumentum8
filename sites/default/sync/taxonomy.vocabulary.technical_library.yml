@@ -1,0 +1,9 @@
+uuid: 2fc8b1cc-a699-42bc-aad9-5d937431f775
+langcode: en
+status: true
+dependencies: {  }
+name: 'Technical Library'
+vid: technical_library
+description: ''
+hierarchy: 1
+weight: -6

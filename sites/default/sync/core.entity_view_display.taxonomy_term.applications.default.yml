@@ -1,0 +1,70 @@
+uuid: 240c9fc8-f418-4911-bc8f-9ac34b98dfef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.applications.field_capabilities
+    - field.field.taxonomy_term.applications.field_description_heading
+    - field.field.taxonomy_term.applications.field_summary_image
+    - field.field.taxonomy_term.applications.field_summary_text
+    - field.field.taxonomy_term.applications.field_taxonomy_banner
+    - taxonomy.vocabulary.applications
+  module:
+    - entity_reference_revisions
+    - image
+    - text
+id: taxonomy_term.applications.default
+targetEntityType: taxonomy_term
+bundle: applications
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_capabilities:
+    weight: 5
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_description_heading:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_summary_image:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_summary_text:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_taxonomy_banner:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  langcode: true

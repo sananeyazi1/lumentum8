@@ -1,0 +1,22 @@
+uuid: 7271eec4-f346-4589-a0af-74d19cb74ad6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.page_market
+  module:
+    - text
+id: node.page_market.body
+field_name: body
+entity_type: node
+bundle: page_market
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

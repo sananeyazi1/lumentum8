@@ -1,0 +1,29 @@
+uuid: e54bcaff-241b-4390-af2e-29326f6f6527
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promo_style
+    - node.type.promotion
+    - taxonomy.vocabulary.promo_image_style
+id: node.promotion.field_promo_style
+field_name: field_promo_style
+entity_type: node
+bundle: promotion
+label: 'Promo Style'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      promo_image_style: promo_image_style
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

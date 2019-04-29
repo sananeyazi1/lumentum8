@@ -1,0 +1,76 @@
+uuid: 1c9ec589-2c6e-4a5b-b1ec-ce12ca4d7eec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.technical_library.field_description_heading
+    - field.field.taxonomy_term.technical_library.field_summary_text
+    - field.field.taxonomy_term.technical_library.field_taxonomy_banner
+    - taxonomy.vocabulary.technical_library
+  module:
+    - paragraphs
+    - path
+    - text
+id: taxonomy_term.technical_library.default
+targetEntityType: taxonomy_term
+bundle: technical_library
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_description_heading:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_summary_text:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_taxonomy_banner:
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

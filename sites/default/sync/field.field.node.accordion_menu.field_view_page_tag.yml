@@ -1,0 +1,36 @@
+uuid: 4c923075-918e-40dd-80f2-82bcd5c7ff81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_view_page_tag
+    - node.type.accordion_menu
+    - node.type.careers
+    - node.type.custom_landing_page_with_banner
+    - node.type.landing_page_with_banner
+    - node.type.page
+    - node.type.page_market
+id: node.accordion_menu.field_view_page_tag
+field_name: field_view_page_tag
+entity_type: node
+bundle: accordion_menu
+label: 'View Page Tag'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+      careers: careers
+      custom_landing_page_with_banner: custom_landing_page_with_banner
+      landing_page_with_banner: landing_page_with_banner
+      page_market: page_market
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: page
+field_type: entity_reference

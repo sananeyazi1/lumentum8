@@ -1,0 +1,35 @@
+uuid: 3c1663ec-4586-442e-be33-fbac37fecc5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.banner_slider.body
+    - field.field.node.banner_slider.field_banner_image
+    - field.field.node.banner_slider.field_link
+    - node.type.banner_slider
+  module:
+    - text
+    - user
+id: node.banner_slider.teaser
+targetEntityType: node
+bundle: banner_slider
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_banner_image: true
+  field_link: true
+  langcode: true

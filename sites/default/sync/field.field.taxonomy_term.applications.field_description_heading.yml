@@ -1,0 +1,19 @@
+uuid: bf6ce952-9569-4858-b59f-769d00f2366e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_description_heading
+    - taxonomy.vocabulary.applications
+id: taxonomy_term.applications.field_description_heading
+field_name: field_description_heading
+entity_type: taxonomy_term
+bundle: applications
+label: 'Description Heading'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

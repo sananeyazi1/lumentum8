@@ -1,0 +1,23 @@
+uuid: 3a422d10-f85c-4215-b12f-a8f0219e6444
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_url
+    - node.type.resource_center
+  module:
+    - link
+id: node.resource_center.field_legacy_url
+field_name: field_legacy_url
+entity_type: node
+bundle: resource_center
+label: 'Legacy URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

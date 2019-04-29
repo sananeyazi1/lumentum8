@@ -1,0 +1,11 @@
+uuid: 010a5abb-8ccc-4ef9-98de-7285fb38418d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.leadership_content
+id: node.leadership_content
+target_entity_type_id: node
+target_bundle: leadership_content
+default_langcode: site_default
+language_alterable: false

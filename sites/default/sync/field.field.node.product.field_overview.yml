@@ -1,0 +1,21 @@
+uuid: 910e3c1d-87c5-4ab2-9eba-074c8d27b11b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_overview
+    - node.type.product
+  module:
+    - text
+id: node.product.field_overview
+field_name: field_overview
+entity_type: node
+bundle: product
+label: Overview
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

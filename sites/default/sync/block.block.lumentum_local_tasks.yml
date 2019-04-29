@@ -1,0 +1,22 @@
+uuid: c1527d49-13d6-4393-8762-5ee5fa22cc46
+langcode: en
+status: true
+dependencies:
+  theme:
+    - lumentum
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: lumentum_local_tasks
+theme: lumentum
+region: sys_impo
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

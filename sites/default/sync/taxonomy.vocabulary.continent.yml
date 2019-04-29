@@ -1,0 +1,9 @@
+uuid: 82d94df9-e512-491c-b428-e129cad60d69
+langcode: en
+status: true
+dependencies: {  }
+name: Continent
+vid: continent
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,18 @@
+uuid: ee1484ae-95f4-4812-ac7c-c641ad849527
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Award and Recognition'
+type: award_and_recognition
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,28 @@
+uuid: c11bf6f2-b73a-407e-8d88-251bb9fb3080
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_reference
+    - node.type.literature_items
+    - node.type.product
+id: node.literature_items.field_content_reference
+field_name: field_content_reference
+entity_type: node
+bundle: literature_items
+label: 'Content Reference'
+description: 'Add a content to which you want to reference this literature piece'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      product: product
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

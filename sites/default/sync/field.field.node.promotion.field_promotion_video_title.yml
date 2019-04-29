@@ -1,0 +1,19 @@
+uuid: 8a5389c4-a482-490c-9e7e-99a77d512189
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotion_video_title
+    - node.type.promotion
+id: node.promotion.field_promotion_video_title
+field_name: field_promotion_video_title
+entity_type: node
+bundle: promotion
+label: 'Promotion Video Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,28 @@
+uuid: b34d1861-e3ad-45fe-a9aa-a88c6884b6fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_related_literature
+    - node.type.literature_items
+    - taxonomy.vocabulary.applications_lab
+id: taxonomy_term.applications_lab.field_related_literature
+field_name: field_related_literature
+entity_type: taxonomy_term
+bundle: applications_lab
+label: 'Related Literature'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      literature_items: literature_items
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

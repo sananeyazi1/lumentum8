@@ -1,0 +1,21 @@
+uuid: 25c98076-8cee-4892-b063-aeac1b743a9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.videos
+  module:
+    - metatag
+id: node.videos.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: videos
+label: Metatag
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

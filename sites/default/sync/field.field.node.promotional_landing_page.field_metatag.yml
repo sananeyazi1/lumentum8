@@ -1,0 +1,21 @@
+uuid: aa4c61d8-b811-41ee-8a7b-ff664a772f71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.promotional_landing_page
+  module:
+    - metatag
+id: node.promotional_landing_page.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: promotional_landing_page
+label: Metatag
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

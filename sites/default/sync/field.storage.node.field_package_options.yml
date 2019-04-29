@@ -1,0 +1,21 @@
+uuid: a816dd86-c8f4-4c1a-8dd0-06e0b913530f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_package_options
+field_name: field_package_options
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

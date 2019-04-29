@@ -1,0 +1,11 @@
+type: module
+name: 'Config Delete'
+description: 'Delete configuration items from the UI.'
+package: 'Development'
+# core: 8.x
+
+# Information added by Drupal.org packaging script on 2018-10-04
+version: '8.x-1.07'
+core: '8.x'
+project: 'config_delete'
+datestamp: 1538680688

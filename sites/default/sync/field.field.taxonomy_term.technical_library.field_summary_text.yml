@@ -1,0 +1,19 @@
+uuid: 0902d54e-a727-4af9-b566-a7a9d5acab57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_summary_text
+    - taxonomy.vocabulary.technical_library
+id: taxonomy_term.technical_library.field_summary_text
+field_name: field_summary_text
+entity_type: taxonomy_term
+bundle: technical_library
+label: 'Summary Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

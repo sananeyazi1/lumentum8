@@ -1,0 +1,180 @@
+/* Scss Document */
+@import "_var";
+@import "_mixin";
+@import "base";
+@import "menu";
+@import "banner";
+@import "media-room";
+
+/*=============================== Global Css ===============================*/
+
+*{ margin:0; padding:0; box-sizing: border-box;}
+body{ 
+  font-family: 'ClanPro-Book', Helvetica, sans-serif;
+  font-size:18px;
+  color:#222;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'ClanPro-Book', Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  color: #1960ae;
+}
+
+.main-wrap{margin-left:250px; overflow:hidden;}
+main {
+  background: #f9f9f9;
+  position: relative;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icon";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: 0em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  a[href*="//"]:not([href*="lumentum.com"]):after {
+    padding-left: 10px;
+    content: "\e80a";
+    display: inline;
+    font-family: icon;
+    font-size: 0.8em;
+    text-decoration: none; 
+  }
+
+#block-lumentum-breadcrumbs{position:absolute; top:26px; left:9px;
+ul{ background:none; padding:0; margin:0 0 0 10px;
+li{display: inline-block;
+a{font-size:12px; text-transform: uppercase; color:#fff;
+&:hover{ text-decoration:none;}
+}
+&:before{content: '/'; font-size:12px; padding:0 5px;}
+&:first-child{
+&:before{ content: '';}  
+}
+}  
+}
+}
+
+/*=============================== Home Top CTA Css ===============================*/
+#block-views-block-accelerating-photonic-innovation-block-1{ max-width:1160px; margin:0 auto; @include clearfix;
+h2{
+  font-size:28px;
+  font-style:italic;
+  line-height:38px;
+  text-align:center;
+  margin-bottom:0;
+  color: #666667;
+  text-transform:uppercase;
+  }
+.views-row{
+  float:left;
+  padding:30px 15px;
+  width:33.33333%;
+  text-align:center;
+  position: relative;
+.market-block-wrap {
+h2{font-size:20px; color: #fff; margin-bottom:4px; font-style:normal;}
+.text{color: #fff; font-size:20px; position:absolute; overflow:hidden; top:36%; left:50%; transform:translate(-50%, -0%); -ms-transform:translate(-50%, -0%); width:90%;
+text-align:center; z-index:9;}
+p{font-size:12px; color: #323133; overflow:hidden; position:relative; opacity:0; transition: all 0.75s cubic-bezier(0.4, 0, 0.2, 1); margin-bottom:6px;}
+.summary { padding-top:40px; position:absolute; bottom:0; left:0px; right:0; background-color: rgba(255,255,255,0.8); overflow:hidden;
+width:100% !important;  height:0;  transition: .5s ease; padding:0; z-index:999;}
+.market-text-mobile{ display:none;}
+.button{@extend .btn; background: none; border:1px solid #6f6f6f;
+&:after{content: '\e809';  margin-left: 8px; font-family:"icon";  font-style:normal;  font-weight:normal; font-size:14px;}
+} 
+
+&:hover{
+.text{ z-index:9999;}
+p{opacity:1;}
+h2{ color:#000;}
+.summary{ height:70%;}
+}
+}
+}  
+}
+
+.news-main-wrap{ background:#fff; padding:60px 0; margin-top:30px;
+.region-after-content{max-width:1160px; margin:0 auto; @include clearfix;}
+.block{ width:33.33333%; float:left; padding:0 15px; position:relative; border-left:1px solid #d1d1d1; min-height:270px;
+&:first-child{ border:none;}  
+.views-field-title{ font-size:16px;}
+h2{font-size:24px; margin:0;
+&:after{content: '\e809';  margin-left:8px; font-family:"icon"; font-style:normal; font-weight:normal;}
+}
+.views-row{margin-bottom:25px; border-bottom:1px dotted #d1d1d1; display:inline-block; width:100%; padding:25px 0;
+&:last-child{ border:none;}
+}
+.views-field-field-date{ font-size:12px; font-family: 'ClanPro-Medium',sans-serif; color: #666667; text-transform: uppercase;}
+.views-field-views-conditional-field{font-size:12px; font-family: 'ClanPro-Medium',sans-serif; color: #666667; text-transform: uppercase;}
+.views-field-field-location-country-code{ text-transform:uppercase; font-style:italic; font-family: "ClanPro-Medium",Helvetica,sans-serif; float:left;
+font-size: 12px; margin-right: .5em; color: #666667;}
+}
+}
+
+.region-before-footer{max-width:1160px; margin:0 auto; @include clearfix; padding:50px 0 25px;}
+#block-views-block-promotions-block-3{
+.views-row{ width:50%; float:left; padding:0 15px; margin-bottom:40px;
+img{ margin:0 0 9px 0; width:100%;}  
+.views-field-title{font-size:22px; line-height:30px; color: #666667; margin-top:0.2rem; margin-bottom:0.5rem;}
+p{font-size:16px; color: #6f6f6f; line-height:26px;}
+.button{@extend .btn;
+&:after{content: '\e809';  margin-left: 8px; font-family:"icon";  font-style:normal;  font-weight:normal; font-size:14px;}
+}
+}
+}
+
+
+/*=============================== Footer Css ===============================*/
+.footer{width:100%; background: #323133; padding:51px 0 46px 0; display:inline-block; vertical-align:top;}
+#block-lumentum-footer{ max-width:1160px; margin:0 auto; @include clearfix;
+section{ padding:0 15px; width:13.90%; float:left;
+h3{margin-bottom:6px; font-size:16px; margin-top:6px;
+a{pointer-events:none; cursor:default; color:#fff;}
+}
+li{list-style:none; margin:10px 0; line-height:1em;
+a{color: #aaa; font-size:14px;}
+}
+}
+}
+
+.footer_bottom{max-width:1160px; margin:22px auto 108px; @include clearfix;
+#block-2levelfooter{height:0; margin-top:12px;  position:relative; left:275px; float:left;
+li{float:left; border-right:1px solid #d2d2d2; padding:0 15px; border-bottom:none; margin:0;
+a{color: #000; font-size:14px; padding:0;
+&:hover{ background:none;}
+}
+}  
+}
+#block-socialmenu{
+ul{ list-style:none; margin:0;
+li{list-style:none; background: #323133; width:50px; height:50px; text-align:center; margin-right:10px; float:right; line-height:50px;
+a{
+i{color: #FFF; font-size:24px;}
+&:hover{ text-decoration:none;}  
+}
+}
+}
+.icon-twitter:before {content: '\e801';}
+.icon-linkedin:before {content: '\e802';}
+.icon-youtube:before {content: '\e803';}
+.icon-rss-icon-1:before {content: '\e80b';} 
+}
+
+.copyright{position:relative; left:-265px; font-size:14px; margin:13px 0 0 0; float:left;}
+}

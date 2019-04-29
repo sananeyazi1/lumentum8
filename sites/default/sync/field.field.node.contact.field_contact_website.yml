@@ -1,0 +1,19 @@
+uuid: 38532346-cc01-4aef-9c17-d8b4e32ef560
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_website
+    - node.type.contact
+id: node.contact.field_contact_website
+field_name: field_contact_website
+entity_type: node
+bundle: contact
+label: 'Contact Website'
+description: 'Enter website of the contact'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

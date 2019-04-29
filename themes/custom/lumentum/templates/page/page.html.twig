@@ -1,0 +1,95 @@
+<div role="document" class="page">
+  <header role="banner" id="left-nav" class="l-header">
+    <div id="top">
+      <a href="javascript:void(0)" class="hide-tablet-landscape-up menu-icon menu-link"><span></span></a>
+      <nav class="top-bar">
+        <a href="{{ site_url }}">
+          <img alt="{{ site_name }}" title="{{ site_name }}" class="logo" width="250" src="{{ site_logo }}">
+        </a>
+      </nav>
+      <a id="search-link" href="lm-search/results?key="></a>
+      <div class="OneLinkImplementation" id="frame" style="float: right;">
+        <div id="globe-wrapper"><span id="globe">Globe
+            <ul>
+              <li><a href= "<?php echo 'https://www.lumentum.com/en/' . $path_alias; ?>" value="en-btn" target="_self">English</a></li>
+              <li><a href="<?php echo 'https://www.lumentum.cn/zh/' . $path_alias; ?>" value="jp-btn" target="_self"><?php echo $chinese; ?></a></li>
+              <li><a href="<?php echo 'https://www.lumentum.co.jp/ja/' . $path_alias; ?>" value="jp-btn" target="_self"><?php echo $japanese; ?></a></li>
+            </ul>
+            </span></div>
+        {#<div class="langDropdown" id="langDrop">
+          <div class="langDropdown-inner">
+            <ul>
+              <li></li>
+              <li><a href= "<?php echo 'https://www.lumentum.com/en/' . $path_alias; ?>" value="en-btn" target="_self">English</a></li>
+              <li><a href="<?php echo 'https://www.lumentum.cn/zh/' . $path_alias; ?>" value="jp-btn" target="_self"><?php echo $chinese; ?></a></li>
+              <li><a href="<?php echo 'https://www.lumentum.co.jp/ja/' . $path_alias; ?>" value="jp-btn" target="_self"><?php echo $japanese; ?></a></li>
+            </ul>
+          </div>
+          <div class="dialog" onClick="closeLang()"><a><i class="closedialog-classic"></i></a></div>
+        </div>#}
+      </div>
+    </div>
+    
+    {% if page.header is not empty %}
+    <section id="menu" class="l-header-region" role="navigation">
+      <div class="large-12 columns">
+        <div class="mega-menu">
+          {{ page.header }}
+        </div>
+      </div>
+      <div class="close-wrap">
+        <a href="javascript:void(0)" class="hide-nav menu-icon-close tier-close-all"><i class="icon-cancel"></i></a>
+      </div>
+    </section>
+    {% endif %}
+    
+  </header>
+    
+  <div class="main-wrap wrap">
+    <main role="main" class="l-main">
+      {% if page.banner is not empty %}
+        {{ page.banner }}
+      {% endif %}
+      {% if page.sys_impo is not empty %}
+        {{ page.sys_impo }}
+      {% endif %}
+      {% if page.before_content is not empty %}
+        {{ page.before_content }}
+      {% endif %}
+      {% if page.content is not empty %}
+        {{ page.content }}
+      {% endif %}
+      {% if page.after_content is not empty %}
+       <div class="news-main-wrap">{{ page.after_content }}</div>
+      {% endif %}
+      {% if page.before_footer is not empty %}
+        {{ page.before_footer }}
+      {% endif %}
+    </main>
+    
+    {% if page.footer is not empty %}
+    <footer class="l-footer" role="contentinfo">
+      <div class="footer">
+        {{ page.footer }}
+        {% if site_name is not empty %}
+        {#<div class="copyright">
+          <div>&copy; {{ "now"|date("Y ") ~ site_name }}</div>
+        </div>#}
+        {% endif %}
+      </div>
+    </footer>
+      
+      <div class="footer_bottom-wrap" role="contentinfo">
+      <div class="footer_bottom">
+        {{ page.footer_bottom }}
+        {% if site_name is not empty %}
+        <div class="copyright">
+          <div>&copy; {{ "now"|date("Y ") ~ site_name }}</div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+      
+  </div>
+</div>

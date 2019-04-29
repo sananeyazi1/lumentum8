@@ -1,0 +1,41 @@
+uuid: 531c1cc3-8721-45d0-b26e-21ce2afccb39
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.broghtcove_video_widget
+  module:
+    - views
+name: brightcove_widget
+label: 'Brightcove Widget'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  51a75d19-d900-4b22-9b14-3bb211c3cc7c:
+    settings:
+      view: broghtcove_video_widget
+      view_display: entity_browser_1
+      submit_text: 'Select entities'
+      auto_select: false
+    uuid: 51a75d19-d900-4b22-9b14-3bb211c3cc7c
+    weight: 1
+    label: Browse
+    id: view
+  114900ac-a691-4d72-bfe1-6a6643dc5fd5:
+    settings:
+      upload_location: 'public://'
+      multiple: true
+      submit_text: 'Select files'
+      extensions: 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp'
+    uuid: 114900ac-a691-4d72-bfe1-6a6643dc5fd5
+    weight: 2
+    label: Upload
+    id: upload

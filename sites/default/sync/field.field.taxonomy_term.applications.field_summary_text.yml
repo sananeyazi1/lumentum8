@@ -1,0 +1,19 @@
+uuid: 5f37db11-c0ea-4156-b5d3-feea04432a34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_summary_text
+    - taxonomy.vocabulary.applications
+id: taxonomy_term.applications.field_summary_text
+field_name: field_summary_text
+entity_type: taxonomy_term
+bundle: applications
+label: 'Summary Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

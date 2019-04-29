@@ -1,0 +1,101 @@
+// Default variables and mixin.
+//@import 'custom_mixin';
+
+
+/*=============================== Banner Css ===============================*/
+.region-banner{position:relative;}
+.views-slideshow-cycle-main-frame-row-item{
+.views-field.views-field-body{
+.field-content{position:absolute; max-width:54%; padding:0 40px; bottom:20%;}
+p{font-size: 26px;
+  color: #fff;
+  line-height: 34px;
+  font-weight: 700;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;   
+  -webkit-animation: textZoom 2s  ;
+  animation: textZoom 2s ;
+  animation-fill-mode: forwards;}  
+}
+.views-field.views-field-field-link{
+.field-content{
+  position: absolute;
+  padding: 0 40px;
+  bottom: 12%;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: textZoom 2s;
+  animation: textZoom 2s;
+  animation-fill-mode: none;
+  animation-fill-mode: forwards;}
+  .button{@extend .btn;
+  &:after{content: '\e809';  margin-left: 8px; font-family:"icon";  font-style:normal;  font-weight:normal; font-size:14px;}
+  }  
+}
+.views-field-field-banner-image{
+img{
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: slideZoom 0.5s;
+  animation: slideZoom 0.5s;
+  animation-fill-mode: none;
+  animation-fill-mode: forwards;
+  background: rgba(0,0,0,0.6);
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+}  
+}
+.views-slideshow-controls-bottom{
+  position: absolute;
+  top: 0;
+  z-index: 13;
+  right: 0;
+  height: 100%;
+  text-align: center;
+  padding: 12px;
+.views-slideshow-pager-bullets{position:relative; top:50%; margin-top:-70px;}
+li{ display: block !important;
+  color: #fff !important;
+  background: none !important;
+  width: 10px;
+  height: 10px;
+  margin: 8px 0 !important;
+  border-radius: 100px !important;
+  border: 1px solid #fff;
+  padding: 0 !important;
+&.active{ background:#fff !important;}
+}
+}
+
+@-webkit-keyframes textZoom {
+  0% { opacity: 0; -webkit-transform: scale(0.9); }
+  100% { opacity: 1; -webkit-transform: scale(1.0); }
+}
+
+@keyframes textZoom {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1.0); }
+}
+
+
+
+/**********************inner Banner****************************/
+#block-views-block-top-banner-block-1{ position:relative; margin:0 0 49px 0;
+.views-field-title{width:100%; max-width:1160px; top:52%; -webkit-transform:translateY(-50%); transform:translateY(-50%); position:absolute; right:0; left:0; margin:0 auto;
+.field-content{ color: #ffffff; text-transform:uppercase; font-size:40px; font-weight:normal; text-align:center; display:block;}
+}
+}
+
+
+.inner-banner-wrap{ position:relative;
+.banner-title{width:100%; max-width:1160px; top:52%; -webkit-transform:translateY(-50%); transform:translateY(-50%); position:absolute; right:0; left:0; margin:0 auto;
+.field-content{ color: #ffffff; text-transform:uppercase; font-size:40px; font-weight:normal; text-align:center; display:block;}
+}
+}

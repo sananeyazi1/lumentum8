@@ -1,0 +1,108 @@
+uuid: 64392adb-4d1b-49ad-8e5a-94907dc5af6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - brightcove
+    - options
+    - user
+id: brightcove_playlist.brightcove_playlist.default
+targetEntityType: brightcove_playlist
+bundle: brightcove_playlist
+mode: default
+content:
+  api_client:
+    type: entity_reference_label
+    weight: 10
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  brightcove_playlist_video_player:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    label: inline
+    type: timestamp
+    weight: 9
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  description:
+    type: basic_string
+    label: above
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  favorite:
+    type: boolean
+    label: inline
+    weight: 2
+    region: content
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+  player:
+    type: entity_reference_label
+    weight: 11
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  playlist_id:
+    type: string
+    label: inline
+    weight: 3
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  reference_id:
+    type: string
+    label: inline
+    weight: 4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  tags:
+    type: entity_reference_label
+    label: above
+    weight: 6
+    region: content
+    settings:
+      link: true
+    third_party_settings: {  }
+  type:
+    type: list_default
+    label: inline
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    label: hidden
+    type: author
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  videos:
+    type: entity_reference_label
+    label: above
+    weight: 7
+    region: content
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden: {  }

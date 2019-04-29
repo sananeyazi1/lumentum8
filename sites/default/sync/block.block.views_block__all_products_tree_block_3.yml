@@ -1,0 +1,30 @@
+uuid: e3a5a29f-a901-4339-9fe9-04d82a561bdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.all_products_tree
+  module:
+    - system
+    - views
+  theme:
+    - lumentum
+id: views_block__all_products_tree_block_3
+theme: lumentum
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:all_products_tree-block_3'
+settings:
+  id: 'views_block:all_products_tree-block_3'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /optical-communications/all-products
+    negate: false
+    context_mapping: {  }

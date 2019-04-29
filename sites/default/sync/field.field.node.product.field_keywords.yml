@@ -1,0 +1,19 @@
+uuid: 327e3d37-4cd2-49fd-9b0e-3358dd6b2289
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_keywords
+    - node.type.product
+id: node.product.field_keywords
+field_name: field_keywords
+entity_type: node
+bundle: product
+label: Keywords
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

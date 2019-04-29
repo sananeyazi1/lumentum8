@@ -1,0 +1,21 @@
+uuid: c80fd959-b5f4-4943-9284-707a14f5a7ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_geocode
+    - node.type.office_location
+  module:
+    - geolocation
+id: node.office_location.field_geocode
+field_name: field_geocode
+entity_type: node
+bundle: office_location
+label: 'Location Geocode'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation

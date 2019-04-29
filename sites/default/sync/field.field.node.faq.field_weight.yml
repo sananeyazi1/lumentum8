@@ -1,0 +1,24 @@
+uuid: 6e75d6d0-9b93-4ff6-bd62-b6c9f71e3a9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.faq
+  module:
+    - weight
+id: node.faq.field_weight
+field_name: field_weight
+entity_type: node
+bundle: faq
+label: Weight
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  range: '80'
+field_type: weight

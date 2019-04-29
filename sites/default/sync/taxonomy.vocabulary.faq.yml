@@ -1,0 +1,9 @@
+uuid: 54b71712-6ba5-480e-88e5-132cae1ec523
+langcode: en
+status: true
+dependencies: {  }
+name: FAQ
+vid: faq
+description: ''
+hierarchy: 0
+weight: 0

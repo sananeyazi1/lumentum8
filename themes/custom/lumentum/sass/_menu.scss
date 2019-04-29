@@ -1,0 +1,60 @@
+// Default variables and mixin.
+//@import 'custom_mixin';
+
+
+/*=============================== Mega Menu Css ===============================*/
+.top-bar{max-width:250px; position:fixed; top:0; padding:35px 0 0; border-right:1px solid #e1e1e1; height:100%;
+    .logo{padding:0 40px 0 15px;}
+    }
+    
+    #block-mainnavigation{position:fixed; width:250px; left:0; top:220px; z-index:10; background:#fff; border-right:1px solid #e1e1e1; height:100%;
+    .navbar{ margin-bottom:0;}
+    ul{ display:block;
+    li{padding:15px !important; border-top:1px solid #e1e1e1 !important; color:#333; width:100%; background:#fff !important;
+    a{ background:#fff !important; font-size:16px !important; color: #323133 !important; font-weight:400 !important; padding:0 !important;
+    font-family: 'ClanPro-Book', Helvetica, sans-serif !important;}
+    &.dropdown-menu{
+    &:after{content: '\e809';  float:right; font-size:20px;  font-family:"icon"; line-height:1;}  
+    }
+    &:last-child{border-bottom:1px solid #e1e1e1;}
+    }
+    }
+    .we-mega-menu-submenu{ position:fixed; left:250px; height:100%; top:0; min-width:0; background: #e9e9e9; margin:0; padding:0; z-index:99;
+    ul{
+    li{ background:none !important; border:none !important;
+    a{color: #1960ae !important; background:none !important;
+    &:hover{ text-decoration:underline;}
+    }
+    }    
+    }
+    }
+    }
+    .OneLinkImplementation { position:absolute; top:24px; right:10px; display:block; z-index:20;}
+    
+    #globe-wrapper{
+    ul{display:none; position:absolute; right:3px; width:153px; margin-top:0px; top:45px;
+    li{list-style:none; text-transform:uppercase; padding:10px; border-bottom:1px solid #e1e1e1; font-size:12px; border-left:4px solid #fff; background:#fff;
+    a{padding:5px 45px 10px 5px; color: #323133;
+    &:hover{color: #1960AE; text-decoration:none;}
+    }
+    &:hover{background: #e9e9e9; border-left:4px solid #EF4136;}
+    } 
+    }
+    #globe{ background: url(../images/icon_white.png) no-repeat; cursor:pointer; width:30px; height:70px; display:block; font-size:0px; background-size:27px 27px;
+    &:hover{
+    ul{ display:block;}
+    }
+    }
+    }
+    
+    #block-contactus{position:absolute; top:20px; z-index:999; right:185px;
+    li{height:34px; border:none; box-shadow:none; font-size:12px; line-height:normal; color: #666666; border-radius:20px; background:#fff;
+    a{text-transform:uppercase; color: #666666;
+    &:hover{ background:none; text-decoration:underline;}
+    }
+    }
+    }
+
+
+.we-mega-menu-ul .we-mega-menu-li.dropdown-menu .we-mega-menu-submenu{ display:none;}
+.we-mega-menu-ul .dropdown-menu:hover > .we-mega-menu-submenu, .we-mega-menu-ul .dropdown-menu:focus > .we-mega-menu-submenu{display:block;}

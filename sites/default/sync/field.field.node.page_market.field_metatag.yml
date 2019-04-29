@@ -1,0 +1,21 @@
+uuid: d6489280-a715-4d45-b201-719a2a61c24d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.page_market
+  module:
+    - metatag
+id: node.page_market.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: page_market
+label: Metatag
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

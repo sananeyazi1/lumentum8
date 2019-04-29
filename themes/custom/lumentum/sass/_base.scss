@@ -1,0 +1,93 @@
+// Default variables and mixin.
+//@import 'custom_mixin';
+
+// font awesome version 4.3.0.
+@font-face {
+  font-family: 'fontawesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.3.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+}
+
+@font-face {
+    font-family: ClanPro-Book;
+    font-weight: normal;
+    src: url("../fonts/ClanPro-Book.otf") format("opentype"), url("../fonts/ClanWebPro-Book.woff") format('woff');  }
+
+@font-face {
+    font-family: ClanPro-BookItalic;
+    font-weight: normal;
+    src: url("../fonts/ClanPro-BookItalic.otf") format("opentype"), url("../fonts/ClanWebPro-BookItalic.woff") format('woff'); }
+
+@font-face {
+    font-family: ClanPro-Bold;
+    font-weight: normal;
+    src: url("../fonts/ClanPro-Bold.otf") format("opentype"), url("../fonts/ClanWebPro-Bold.woff") format('woff'); }
+
+@font-face {
+    font-family: ClanPro-News;
+    font-weight: normal;
+    src: url("../fonts/ClanPro-News.otf") format("opentype"), url("../fonts/ClanWebPro-News.woff") format('woff'); }
+
+@font-face {
+    font-family: ClanPro-News-Italic;
+    font-weight: normal;
+    src: url("../fonts/ClanPro-NewsItalic.otf") format("opentype"), url("../fonts/ClanWebPro-NewsItalic.woff") format('woff'); }
+
+@font-face {
+    font-family: ClanPro-Medium;
+    font-weight: normal;
+    src: url("../fonts/ClanPro-Medium.otf") format("opentype"), url("../fonts/ClanWebPro-Medium.woff") format('woff'); }
+
+@font-face {
+    font-family: ClanPro-MediumItalic;
+    font-weight: normal;
+    src: url("../fonts/ClanPro-MediumItalic.otf") format("opentype"), url("../fonts/ClanWebPro-MediumItalic.woff") format('woff'); }
+
+@font-face {
+    font-family: Metral-Medium;
+    font-weight: normal;
+    src: url("../fonts/Metral-Medium.otf") format("opentype"); }
+
+@font-face {
+    font-family: 'icon';
+    src: url('../fonts/icon.eot?17097586');
+    src: url('../fonts/icon.eot?17097586#iefix') format('embedded-opentype'), url('../fonts/icon.woff?17097586') format('woff'), url('../fonts/icon.ttf?17097586') format('truetype'), url('../fonts/icon.svg?17097586#icon') format('svg');
+    font-weight: normal;
+    font-style: normal; }
+
+
+
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.btn {
+    background: #fff;
+    margin-bottom: 0;
+    border: 1px solid #ddd;
+    padding: 8px 4px 8px 10px;
+    display: inline-block;
+    font-family: ClanPro-Book, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #6f6f6f;
+    line-height:normal;
+    &:hover {
+        text-decoration:none;
+        color: #FFF;
+        border: 1px solid #FFF !important;
+        background: #cd1c81;
+        background: linear-gradient(45deg,#cd1c81 0%,#de3f57 32%,#faa53a 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cd1c81',endColorstr='#faa53a',GradientType=1);
+    }
+}
+

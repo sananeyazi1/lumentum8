@@ -1,0 +1,18 @@
+uuid: 3ac86147-cd20-4238-8f8b-744d7c549e61
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.banner_slider
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.banner_slider
+target_entity_type_id: node
+target_bundle: banner_slider
+default_langcode: site_default
+language_alterable: false

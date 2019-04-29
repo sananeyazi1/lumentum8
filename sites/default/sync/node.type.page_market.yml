@@ -1,0 +1,18 @@
+uuid: 5da67d59-13e5-40c2-8654-3b9bbc15ba54
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Page - Market'
+type: page_market
+description: '<em>Page - Market</em> is used for creating home-page and some other pages. So do not <em>Delete!</em>.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

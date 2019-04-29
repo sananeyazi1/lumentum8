@@ -1,0 +1,21 @@
+uuid: 0bfe62d9-b587-4882-9d6e-6874c5e78b1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_type
+    - node.type.contact
+  module:
+    - options
+id: node.contact.field_contact_type
+field_name: field_contact_type
+entity_type: node
+bundle: contact
+label: 'Contact Type'
+description: 'Choose one of the options'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

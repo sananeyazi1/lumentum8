@@ -1,0 +1,19 @@
+uuid: 445f2101-a250-4d96-b1b8-03a116c5b896
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_keywords
+field_name: field_keywords
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

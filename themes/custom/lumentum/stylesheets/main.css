@@ -1,0 +1,396 @@
+/* Scss Document */
+/* Colors */
+/* line 11, ../sass/_var.scss */
+.transition {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 8, ../sass/_mixin.scss */
+.d-flex {
+  display: -webkit-flex;
+  display: flex;
+}
+
+@font-face {
+  font-family: 'fontawesome';
+  src: url("../fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg");
+}
+@font-face {
+  font-family: ClanPro-Book;
+  font-weight: normal;
+  src: url("../fonts/ClanPro-Book.otf") format("opentype"), url("../fonts/ClanWebPro-Book.woff") format("woff");
+}
+@font-face {
+  font-family: ClanPro-BookItalic;
+  font-weight: normal;
+  src: url("../fonts/ClanPro-BookItalic.otf") format("opentype"), url("../fonts/ClanWebPro-BookItalic.woff") format("woff");
+}
+@font-face {
+  font-family: ClanPro-Bold;
+  font-weight: normal;
+  src: url("../fonts/ClanPro-Bold.otf") format("opentype"), url("../fonts/ClanWebPro-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: ClanPro-News;
+  font-weight: normal;
+  src: url("../fonts/ClanPro-News.otf") format("opentype"), url("../fonts/ClanWebPro-News.woff") format("woff");
+}
+@font-face {
+  font-family: ClanPro-News-Italic;
+  font-weight: normal;
+  src: url("../fonts/ClanPro-NewsItalic.otf") format("opentype"), url("../fonts/ClanWebPro-NewsItalic.woff") format("woff");
+}
+@font-face {
+  font-family: ClanPro-Medium;
+  font-weight: normal;
+  src: url("../fonts/ClanPro-Medium.otf") format("opentype"), url("../fonts/ClanWebPro-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: ClanPro-MediumItalic;
+  font-weight: normal;
+  src: url("../fonts/ClanPro-MediumItalic.otf") format("opentype"), url("../fonts/ClanWebPro-MediumItalic.woff") format("woff");
+}
+@font-face {
+  font-family: Metral-Medium;
+  font-weight: normal;
+  src: url("../fonts/Metral-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: 'icon';
+  src: url("../fonts/icon.eot?17097586");
+  src: url("../fonts/icon.eot?17097586#iefix") format("embedded-opentype"), url("../fonts/icon.woff?17097586") format("woff"), url("../fonts/icon.ttf?17097586") format("truetype"), url("../fonts/icon.svg?17097586#icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 72, ../sass/_base.scss */
+.btn, .views-slideshow-cycle-main-frame-row-item .views-field.views-field-field-link .button {
+  background: #fff;
+  margin-bottom: 0;
+  border: 1px solid #ddd;
+  padding: 8px 4px 8px 10px;
+  display: inline-block;
+  font-family: ClanPro-Book, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #6f6f6f;
+}
+/* line 83, ../sass/_base.scss */
+.btn:hover, .views-slideshow-cycle-main-frame-row-item .views-field.views-field-field-link .button:hover {
+  text-decoration: none;
+  color: #FFF;
+  border: 1px solid #FFF !important;
+  background: #cd1c81;
+  background: linear-gradient(45deg, #cd1c81 0%, #de3f57 32%, #faa53a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cd1c81',endColorstr='#faa53a',GradientType=1);
+}
+
+/*=============================== Global Css ===============================*/
+/* line 9, ../sass/main.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 10, ../sass/main.scss */
+body {
+  font-family: 'ClanPro-Book', Helvetica, sans-serif;
+  font-size: 18px;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* line 17, ../sass/main.scss */
+h1, h2, h3, h4 {
+  font-family: 'ClanPro-Book', Helvetica, sans-serif;
+}
+
+/*=============================== Mega Menu Css ===============================*/
+/* line 23, ../sass/main.scss */
+.top-bar {
+  max-width: 250px;
+  position: fixed;
+  top: 0;
+  padding: 35px 0 0;
+  border-right: 1px solid #e1e1e1;
+  height: 100%;
+}
+/* line 24, ../sass/main.scss */
+.top-bar .logo {
+  padding: 0 40px 0 15px;
+}
+
+/* line 27, ../sass/main.scss */
+#block-mainnavigation {
+  position: fixed;
+  width: 250px;
+  left: 0;
+  top: 220px;
+  z-index: 10;
+  background: #fff;
+  border-right: 1px solid #e1e1e1;
+  height: 100%;
+}
+/* line 28, ../sass/main.scss */
+#block-mainnavigation .navbar {
+  margin-bottom: 0;
+}
+/* line 29, ../sass/main.scss */
+#block-mainnavigation ul {
+  display: block;
+}
+/* line 30, ../sass/main.scss */
+#block-mainnavigation ul li {
+  padding: 15px !important;
+  border-top: 1px solid #e1e1e1 !important;
+  color: #333;
+  width: 100%;
+  background: #fff !important;
+}
+/* line 31, ../sass/main.scss */
+#block-mainnavigation ul li a {
+  background: #fff !important;
+  font-size: 16px !important;
+  color: #323133 !important;
+  font-weight: 400 !important;
+  padding: 0 !important;
+  font-family: 'ClanPro-Book', Helvetica, sans-serif !important;
+}
+/* line 34, ../sass/main.scss */
+#block-mainnavigation ul li.dropdown-menu:after {
+  content: '\e809';
+  float: right;
+  font-size: 20px;
+  font-family: "icon";
+  line-height: 1;
+}
+
+/* line 40, ../sass/main.scss */
+.OneLinkImplementation {
+  position: absolute;
+  top: 24px;
+  right: 10px;
+  display: block;
+  z-index: 20;
+}
+
+/* line 43, ../sass/main.scss */
+#globe-wrapper ul {
+  display: none;
+  position: absolute;
+  right: 3px;
+  width: 153px;
+  margin-top: 0px;
+  top: 45px;
+}
+/* line 44, ../sass/main.scss */
+#globe-wrapper ul li {
+  list-style: none;
+  text-transform: uppercase;
+  padding: 10px;
+  border-bottom: 1px solid #e1e1e1;
+  font-size: 12px;
+  border-left: 4px solid #fff;
+  background: #fff;
+}
+/* line 45, ../sass/main.scss */
+#globe-wrapper ul li a {
+  padding: 5px 45px 10px 5px;
+  color: #323133;
+}
+/* line 46, ../sass/main.scss */
+#globe-wrapper ul li a:hover {
+  color: #1960AE;
+  text-decoration: none;
+}
+/* line 48, ../sass/main.scss */
+#globe-wrapper ul li:hover {
+  background: #e9e9e9;
+  border-left: 4px solid #EF4136;
+}
+/* line 51, ../sass/main.scss */
+#globe-wrapper #globe {
+  background: url(../images/icon_white.png) no-repeat;
+  cursor: pointer;
+  width: 30px;
+  height: 70px;
+  display: block;
+  font-size: 0px;
+  background-size: 27px 27px;
+}
+/* line 53, ../sass/main.scss */
+#globe-wrapper #globe:hover ul {
+  display: block;
+}
+
+/* line 58, ../sass/main.scss */
+#block-contactus {
+  position: absolute;
+  top: 20px;
+  z-index: 999;
+  right: 185px;
+}
+/* line 59, ../sass/main.scss */
+#block-contactus li {
+  height: 34px;
+  border: none;
+  box-shadow: none;
+  font-size: 12px;
+  line-height: normal;
+  color: #666666;
+  border-radius: 20px;
+  background: #fff;
+}
+/* line 60, ../sass/main.scss */
+#block-contactus li a {
+  text-transform: uppercase;
+  color: #666666;
+}
+/* line 61, ../sass/main.scss */
+#block-contactus li a:hover {
+  background: none;
+  text-decoration: underline;
+}
+
+/*=============================== Banner Css ===============================*/
+/* line 70, ../sass/main.scss */
+.views-slideshow-cycle-main-frame-row-item .views-field.views-field-body .field-content {
+  position: absolute;
+  max-width: 54%;
+  padding: 0 40px;
+  bottom: 20%;
+}
+/* line 71, ../sass/main.scss */
+.views-slideshow-cycle-main-frame-row-item .views-field.views-field-body p {
+  font-size: 26px;
+  color: #fff;
+  line-height: 34px;
+  font-weight: 700;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: textZoom 2s;
+  animation: textZoom 2s;
+  animation-fill-mode: forwards;
+}
+/* line 83, ../sass/main.scss */
+.views-slideshow-cycle-main-frame-row-item .views-field.views-field-field-link .field-content {
+  position: absolute;
+  padding: 0 40px;
+  bottom: 12%;
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: textZoom 2s;
+  animation: textZoom 2s;
+  animation-fill-mode: none;
+  animation-fill-mode: forwards;
+}
+/* line 95, ../sass/main.scss */
+.views-slideshow-cycle-main-frame-row-item .views-field.views-field-field-link .button:after {
+  content: '\e809';
+  margin-left: 8px;
+  font-family: "icon";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+/* line 99, ../sass/main.scss */
+.views-slideshow-cycle-main-frame-row-item .views-field-field-banner-image img {
+  -webkit-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  -webkit-animation: slideZoom 0.5s;
+  animation: slideZoom 0.5s;
+  animation-fill-mode: none;
+  animation-fill-mode: forwards;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+@-webkit-keyframes textZoom {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes textZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* line 126, ../sass/main.scss */
+.main-wrap {
+  margin-left: 250px;
+  overflow: hidden;
+}
+
+/*=============================== Home Top CTA Css ===============================*/
+/* line 130, ../sass/main.scss */
+#block-views-block-accelerating-photonic-innovation-block-1 {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+/* line 62, ../sass/_base.scss */
+#block-views-block-accelerating-photonic-innovation-block-1:before, #block-views-block-accelerating-photonic-innovation-block-1:after {
+  content: "";
+  display: table;
+}
+/* line 67, ../sass/_base.scss */
+#block-views-block-accelerating-photonic-innovation-block-1:after {
+  clear: both;
+}
+/* line 131, ../sass/main.scss */
+#block-views-block-accelerating-photonic-innovation-block-1 h2 {
+  font-size: 28px;
+  font-style: italic;
+  line-height: 38px;
+  text-align: center;
+  margin-bottom: 0;
+  color: #666667;
+}
+/* line 139, ../sass/main.scss */
+#block-views-block-accelerating-photonic-innovation-block-1 .views-row {
+  float: left;
+  padding: 30px 0;
+  width: 33.33333%;
+  text-align: center;
+}
+/* line 145, ../sass/main.scss */
+#block-views-block-accelerating-photonic-innovation-block-1 .views-row .market-block-wrap h2 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 4px;
+  font-style: normal;
+}
+/* line 146, ../sass/main.scss */
+#block-views-block-accelerating-photonic-innovation-block-1 .views-row .market-block-wrap .text {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  width: 90%;
+  text-align: center;
+  z-index: 9;
+}

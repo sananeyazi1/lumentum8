@@ -1,0 +1,24 @@
+uuid: 57d0ef78-b513-48e0-aa1a-140987c1fdf3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.leadership_content
+  module:
+    - weight
+id: node.leadership_content.field_weight
+field_name: field_weight
+entity_type: node
+bundle: leadership_content
+label: Weight
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  range: '50'
+field_type: weight

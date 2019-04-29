@@ -1,0 +1,29 @@
+uuid: de3b32aa-a089-40a5-9599-383d0ef5e41f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_applications_category
+    - node.type.resource_center
+    - taxonomy.vocabulary.applications
+id: node.resource_center.field_applications_category
+field_name: field_applications_category
+entity_type: node
+bundle: resource_center
+label: 'Applications Category'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      applications: applications
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

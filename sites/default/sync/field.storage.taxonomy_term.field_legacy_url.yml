@@ -1,0 +1,19 @@
+uuid: 8b23c3ce-7a2f-40e3-9c4f-8725f03dc194
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+id: taxonomy_term.field_legacy_url
+field_name: field_legacy_url
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

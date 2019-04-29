@@ -1,0 +1,23 @@
+uuid: 3d3a8482-a8a3-47cd-9548-0a01fe3f72ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.careers
+  module:
+    - link
+id: node.careers.field_link
+field_name: field_link
+entity_type: node
+bundle: careers
+label: 'Banner Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

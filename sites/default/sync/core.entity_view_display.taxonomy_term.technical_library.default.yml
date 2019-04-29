@@ -1,0 +1,50 @@
+uuid: a937a841-43eb-43d3-879f-da668fad5d1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.technical_library.field_description_heading
+    - field.field.taxonomy_term.technical_library.field_summary_text
+    - field.field.taxonomy_term.technical_library.field_taxonomy_banner
+    - taxonomy.vocabulary.technical_library
+  module:
+    - entity_reference_revisions
+    - text
+id: taxonomy_term.technical_library.default
+targetEntityType: taxonomy_term
+bundle: technical_library
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_description_heading:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_summary_text:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_taxonomy_banner:
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  langcode: true

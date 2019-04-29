@@ -1,0 +1,9 @@
+uuid: 2846063c-cb08-434f-8679-d08a531df6d1
+langcode: en
+status: true
+dependencies: {  }
+id: content_block
+label: 'Content Block'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: da1a2f26-aa3f-4b4c-8e0f-4e557bd041b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.careers
+  module:
+    - metatag
+id: node.careers.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: careers
+label: Metatag
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

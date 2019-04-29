@@ -1,0 +1,9 @@
+uuid: 3c5d9ba2-edc8-45f9-b7c8-9fe8367919bf
+langcode: en
+status: true
+dependencies: {  }
+name: Applications
+vid: applications
+description: ''
+hierarchy: 1
+weight: -10

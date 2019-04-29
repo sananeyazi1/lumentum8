@@ -1,0 +1,32 @@
+uuid: c673c5e4-a4dc-4d82-b949-59fc4ec93e78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promo_page
+    - node.type.page
+    - node.type.page_market
+    - node.type.product
+    - node.type.promotion
+id: node.promotion.field_promo_page
+field_name: field_promo_page
+entity_type: node
+bundle: promotion
+label: 'Promo Page'
+description: 'Select the Product, Landing, or Market pages where this Promotion should be displayed by typing in the page name.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+      page_market: page_market
+      product: product
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: page
+field_type: entity_reference

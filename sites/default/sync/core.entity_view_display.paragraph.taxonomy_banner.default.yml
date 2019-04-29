@@ -1,0 +1,46 @@
+uuid: ecefd627-5ca4-4ce9-a77c-7ae3f982aa67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.taxonomy_banner.field_banner_caption
+    - field.field.paragraph.taxonomy_banner.field_banner_link
+    - field.field.paragraph.taxonomy_banner.field_image
+    - paragraphs.paragraphs_type.taxonomy_banner
+  module:
+    - image
+    - link
+id: paragraph.taxonomy_banner.default
+targetEntityType: paragraph
+bundle: taxonomy_banner
+mode: default
+content:
+  field_banner_caption:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_banner_link:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

@@ -1,0 +1,6 @@
+defaultAPIClient: lumentum_brightcove
+notification:
+  callbackExpirationTime: 86400
+disable_cron: 0
+_core:
+  default_config_hash: BiNscJvWODm5dAuF6l_Dbb_ip4OsbIil7XLQ5Yrpgrg

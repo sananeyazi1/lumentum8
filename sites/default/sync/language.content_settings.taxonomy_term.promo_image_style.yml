@@ -1,0 +1,11 @@
+uuid: 0b1e504c-6385-405d-a601-cb5568694c53
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.promo_image_style
+id: taxonomy_term.promo_image_style
+target_entity_type_id: taxonomy_term
+target_bundle: promo_image_style
+default_langcode: site_default
+language_alterable: false

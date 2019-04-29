@@ -1,0 +1,19 @@
+uuid: c61c9612-d60d-4643-9d20-4b46392d615b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_hero_content
+    - paragraphs.paragraphs_type.hero_media
+id: paragraph.hero_media.field_hero_content
+field_name: field_hero_content
+entity_type: paragraph
+bundle: hero_media
+label: 'Hero caption'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

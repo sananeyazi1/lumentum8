@@ -1,0 +1,11 @@
+uuid: 242af7ad-25c6-48f6-9628-90120271d457
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.technical_library
+id: taxonomy_term.technical_library
+target_entity_type_id: taxonomy_term
+target_bundle: technical_library
+default_langcode: site_default
+language_alterable: false

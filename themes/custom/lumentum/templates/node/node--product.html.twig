@@ -1,0 +1,176 @@
+<div class="panel-display panel-tabs clearfix">
+  <div class="column-wrapper row">
+    <div class="tabs-wrapper clearfix column medium-8 medium-offset-2">
+      <ul class="tabs small-block-grid-4" data-tab="" role="tablist">
+        {% if product_page_related_products.0 >= 1 or product_page_related_videos.0 >= 1 %}
+        <li class="tab-title active" role="presentational">
+          <a href="#overview" role="tab" aria-selected="true" controls="overview">
+            <div class="inside">Overview</div>
+          </a>
+        </li>
+        {% endif %}
+        
+        {% if product_page_related_products.0 >= 1 %}
+        <li class="tab-title" role="presentational">
+          <a href="#related-products" role="tab" aria-selected="false" controls="related-products">
+            <div class="inside">Related Products</div>
+          </a>
+        </li>
+        {% endif %}
+        
+        {% if product_page_related_videos.0 >= 1 %}
+        <li class="tab-title" role="presentational">
+          <a href="#videos-demos" role="tab" aria-selected="false" controls="videos-demos">
+            <div class="inside">Videos</div>
+          </a>
+        </li>
+        {% endif %}
+        <li class="contact js-sales-link-tab right">
+          <a href="/en/company/contact-us#contact-sales" aria-selected="false">
+            <div class="inside">Contact Sales</div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="tabs-content js-tabs-content">
+      <div class="prod-details column medium-8 medium-offset-2">
+        <h1 class="product-titleh1">{{ label }}</h1>
+        {% if  model_li is not empty %}
+        <h2 class="product-modelh2">{{ model_li }}</h2>
+        {% endif %}
+      </div>
+      
+      {% if product_page_related_products.0 >= 1 or product_page_related_videos.0 >= 1 %}
+      <div role="tabpanel" aria-hidden="false" class="content active" id="overview">
+        <div class="inside large-8 large-offset-2 columns">
+      {% endif %}
+          {% if content.field_image is not empty %}
+            {{ content.field_image }}
+          {% endif %}
+
+          {% if content.field_overview is not empty %}
+            {{ content.field_overview }}
+          {% endif %}
+
+          {% if default_technical_library is not empty %}
+            <div class="tech-doc clearfix">
+              <a href="{{ default_technical_library.1 }}" target="_blank" class="pdf">{{ default_technical_library.0 }}</a> <i class="right icon-pdf"></i></div>
+          {% endif %}
+
+          {% if content.field_features is not empty %}
+            {{ content.field_features }}
+          {% endif %}
+
+          {% if content.field_benefits is not empty %}
+            {{ content.field_benefits }}
+          {% endif %}
+
+          {% if content.field_applications is not empty %}
+            {{ content.field_applications }}
+          {% endif %}
+
+          {% if content.field_highlights is not empty %}
+            {{ content.field_highlights }}
+          {% endif %}
+
+          {% if content.field_compatibility is not empty %}
+            {{ content.field_compatibility }}
+          {% endif %}
+
+          {% if content.field_electronics is not empty %}
+            {{ content.field_electronics }}
+          {% endif %}
+
+          {% if content.field_fabrication_options is not empty %}
+            {{ content.field_fabrication_options }}
+          {% endif %}
+
+          {% if content.field_options is not empty %}
+            {{ content.field_options }}
+          {% endif %}
+
+          {% if content.field_package_options is not empty %}
+            {{ content.field_package_options }}
+          {% endif %}
+
+          {% if content.field_packaging is not empty %}
+            {{ content.field_packaging }}
+          {% endif %}
+
+          {% if content.field_optics is not empty %}
+            {{ content.field_optics }}
+          {% endif %}
+
+          {% if content.field_services is not empty %}
+            {{ content.field_services }}
+          {% endif %}
+
+          {% if content.field_software_firmware is not empty %}
+            {{ content.field_software_firmware }}
+          {% endif %}
+
+          {% if content.field_compliance is not empty %}
+            {{ content.field_compliance }}
+          {% endif %}
+
+          {% if content.field_footer_text is not empty %}
+            {{ content.field_footer_text }}
+          {% endif %}
+          
+      {% if product_page_related_products.0 >= 1 or product_page_related_videos.0 >= 1 %}
+        </div>
+      </div>
+      {% endif %}
+        
+      {% if product_page_related_products.0 >= 1 %}
+      <div role="tabpanel" aria-hidden="true" class="content" id="related-products">
+        <div class="inside large-8 large-offset-2 columns">
+          {{ product_page_related_products.1 }}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if product_page_related_videos.0 >= 1 %}
+      <div role="tabpanel" aria-hidden="true" class="content" id="videos-demos">
+        <div class="inside large-8 large-offset-2 columns">
+          {{ product_page_related_videos.1 }}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% if product_category is not empty %}
+<div class="all-products-link-wrapper">
+  <a class="all-products-link" href="{{ product_category }}">All Products</a>
+</div>
+{% endif %}
+
+
+{% if product_page_related_promo_block.0 >= 1 or technical_library is not empty %}
+<div class="div-footer">
+  <div class="row">
+    <div class="large- columns">
+      <div class="view-title"><h2>{{ 'Related Information'|t }}</h2></div>
+      {% if product_page_related_promo_block.0 >= 1 %}
+      <div class="content-promotions">
+        {{ product_page_related_promo_block.1 }}
+      </div>
+      {% endif %}
+      {% if technical_library is not empty %}
+      <div class="content-tech-library">
+        {% for key, item in technical_library %}
+          {% set class = 'views-row views-row-'~key~' views-row-'~cycle(['odd', 'even'], key) %}
+        <div class="{{ class }}">
+          <div class="tech-doc">
+            <a href="{{ item.1 }}" target="_blank" class="pdf">{{ item.0 }}</a> <i class="right icon-pdf"></i>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endif %}

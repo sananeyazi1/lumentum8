@@ -1,0 +1,22 @@
+uuid: 16ccacf8-d2e3-4761-ba81-b8da498c51f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.webform_pdf
+  module:
+    - text
+id: node.webform_pdf.body
+field_name: body
+entity_type: node
+bundle: webform_pdf
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

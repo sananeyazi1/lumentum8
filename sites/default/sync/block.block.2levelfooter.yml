@@ -1,0 +1,24 @@
+uuid: 66de5ae0-0a6c-4e7d-a396-ef4a995a0ab0
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.2-level-footer
+  module:
+    - system
+  theme:
+    - lumentum
+id: 2levelfooter
+theme: lumentum
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:2-level-footer'
+settings:
+  id: 'system_menu_block:2-level-footer'
+  label: '2 level Footer'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

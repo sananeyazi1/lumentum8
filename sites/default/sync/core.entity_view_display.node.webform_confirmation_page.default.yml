@@ -1,0 +1,40 @@
+uuid: f6a0000f-9e1f-46b1-b2ab-3f689ccb86a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.webform_confirmation_page.body
+    - field.field.node.webform_confirmation_page.field_banner_image
+    - node.type.webform_confirmation_page
+  module:
+    - image
+    - text
+    - user
+id: node.webform_confirmation_page.default
+targetEntityType: node
+bundle: webform_confirmation_page
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_banner_image:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

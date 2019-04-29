@@ -1,0 +1,63 @@
+// Default variables and mixin.
+//@import 'custom_mixin';
+
+
+#block-lumentum-content{padding:0px; max-width:773px; margin:0 auto; @include clearfix;
+h2{color: #323133; font-size:24px; margin:3px 0 9px;}
+p{font-size:16px; color: #666667; line-height: 26px;}
+.views-row{ border-bottom:1px dotted #d1d1d1; display:inline-block; width:100%; padding:25px 0; vertical-align:top;
+.views-field-title{ font-size:16px;}
+.views-field-field-date{ font-size:12px; font-family: 'ClanPro-Medium',sans-serif; color: #666667;}    
+}
+}
+
+#block-views-block-videos-block-2{
+.views-row{width:50%; float:left; padding:0 15px;
+.views-field-field-brightcove-video{ min-width:100% !important;  display:inline-block !important; max-width: 100% !important; margin:15px 0 0 0;}
+.video-js{ width:100% !important; min-width:100% !important; max-width:100% !important; height:100% !important; padding-top:56.5% !important; position:relative !important;}
+.views-field-title{ margin:15px 0 0 0;
+a{ font-family: 'ClanPro-Medium',sans-serif; color: #1960ae; font-size:16px; line-height:26px;}    
+}
+.views-field-body{ margin:15px 0 0 0;
+p{font-size:16px; color: #666667; line-height:26px; margin-bottom:1.25rem;}
+}
+}
+}
+
+#block-views-block-news-block-3{width:63%; float:left; padding:0 15px; border-right:1px solid #e1e1e1;
+h2{font-size:22px; margin:0; color: #323133;
+&:after{content: '\e809';  margin-left:8px; font-family:"icon"; font-style:normal; font-weight:normal;}
+}
+ul{ list-style:none;
+li{padding: 25px 0 0 0;}
+}
+.views-field-title{ font-size:16px;}
+.views-field-field-date{ font-size:12px; font-family:'ClanPro-Medium',sans-serif; color: #666667;}
+p{font-size:16px; color: #666667; line-height:26px; margin-bottom:1.25rem}
+}
+
+#block-contactusmediaroom{ width:37%; float:left; text-align:center; padding:0 15px;
+a{font-size:24px; padding:35px 38px 32px; color: #1960ae; text-transform:capitalize; display:inline-block; max-width:253px; text-align:center; width:100%; margin:0 auto;
+border: 1px solid #dfdfdf;
+&:hover {
+    text-decoration:none;
+    color: #FFF;
+    border: 1px solid #FFF !important;
+    background: #cd1c81;
+    background: linear-gradient(45deg,#cd1c81 0%,#de3f57 32%,#faa53a 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cd1c81',endColorstr='#faa53a',GradientType=1);
+}
+}
+}
+
+#block-lumentum-page-title{ max-width:773px; margin:0 auto;
+h1{font-size:24px; font-weight:normal; color: #323133;}
+}
+
+/**************event section**************/
+.events-wrap-box{
+.views-field-field-event-date-range{font-size:12px; font-family: 'ClanPro-Medium',sans-serif; color: #666667;}
+.views-field-field-legacy-url{ font-size:16px;}
+.views-field-field-location-address-line1{text-transform:uppercase; color: #666667; font-style:italic; font-family:'ClanPro-Medium',sans-serif; font-size:12px;
+margin-right:.5em;}    
+}

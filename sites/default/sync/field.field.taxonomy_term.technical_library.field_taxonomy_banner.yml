@@ -1,0 +1,40 @@
+uuid: 1666353f-aaad-45ca-97a9-af1b455931ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxonomy_banner
+    - paragraphs.paragraphs_type.taxonomy_banner
+    - taxonomy.vocabulary.technical_library
+  module:
+    - entity_reference_revisions
+id: taxonomy_term.technical_library.field_taxonomy_banner
+field_name: field_taxonomy_banner
+entity_type: taxonomy_term
+bundle: technical_library
+label: 'Taxonomy Banner'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      taxonomy_banner: taxonomy_banner
+    target_bundles_drag_drop:
+      content_block:
+        weight: 5
+        enabled: false
+      hero_media:
+        weight: 6
+        enabled: false
+      taxonomy_banner:
+        enabled: true
+        weight: 7
+      text_content_block:
+        weight: 8
+        enabled: false
+field_type: entity_reference_revisions

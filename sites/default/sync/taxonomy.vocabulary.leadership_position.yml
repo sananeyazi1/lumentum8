@@ -1,0 +1,9 @@
+uuid: bca99401-9742-45b5-9606-6f9df129a220
+langcode: en
+status: true
+dependencies: {  }
+name: 'Leadership Position'
+vid: leadership_position
+description: ''
+hierarchy: 0
+weight: 0

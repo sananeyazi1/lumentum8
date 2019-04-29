@@ -1,0 +1,29 @@
+uuid: f86fccbf-ffdf-490a-9897-d133dd1d3a5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_applications_category
+    - node.type.news
+    - taxonomy.vocabulary.applications
+id: node.news.field_applications_category
+field_name: field_applications_category
+entity_type: node
+bundle: news
+label: 'Applications Category'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      applications: applications
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

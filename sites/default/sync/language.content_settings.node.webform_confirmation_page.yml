@@ -1,0 +1,11 @@
+uuid: b1aad01b-30e2-4524-84ee-607b523cf840
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.webform_confirmation_page
+id: node.webform_confirmation_page
+target_entity_type_id: node
+target_bundle: webform_confirmation_page
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,24 @@
+uuid: ebeeb825-57e9-43e7-85ee-7548d6443099
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-menu
+  module:
+    - system
+  theme:
+    - lumentum
+id: socialmenu
+theme: lumentum
+region: footer
+weight: -5
+provider: null
+plugin: 'system_menu_block:social-menu'
+settings:
+  id: 'system_menu_block:social-menu'
+  label: 'Social Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: e3f3d417-aa6c-462a-b7d2-be16c2bbf2e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_document_attachment
+    - node.type.webform_pdf
+  module:
+    - file
+id: node.webform_pdf.field_document_attachment
+field_name: field_document_attachment
+entity_type: node
+bundle: webform_pdf
+label: 'Document attachment'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf ppt'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

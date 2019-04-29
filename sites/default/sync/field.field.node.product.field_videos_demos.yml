@@ -1,0 +1,28 @@
+uuid: ae49c77e-ab8d-4d5a-b541-42decf584216
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_videos_demos
+    - node.type.product
+    - node.type.videos
+id: node.product.field_videos_demos
+field_name: field_videos_demos
+entity_type: node
+bundle: product
+label: Videos/Demos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      videos: videos
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

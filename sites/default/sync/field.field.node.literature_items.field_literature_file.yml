@@ -1,0 +1,27 @@
+uuid: 59932779-b8d3-4a1b-826e-c51cfc03920c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_literature_file
+    - node.type.literature_items
+  module:
+    - file
+id: node.literature_items.field_literature_file
+field_name: field_literature_file
+entity_type: node
+bundle: literature_items
+label: 'Literature File'
+description: 'Upload your file that will be downlodable. Note: Please upload the file here or add link below, but NOT both'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: literature-items
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,0 +1,22 @@
+uuid: cedb1940-70fa-4e3c-9556-c539dd527717
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.careers
+  module:
+    - text
+id: node.careers.body
+field_name: body
+entity_type: node
+bundle: careers
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

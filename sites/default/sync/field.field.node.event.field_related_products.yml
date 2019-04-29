@@ -1,0 +1,25 @@
+uuid: 18bcd250-6f6a-43c1-946d-dc752fcdf1d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_products
+    - node.type.event
+id: node.event.field_related_products
+field_name: field_related_products
+entity_type: node
+bundle: event
+label: Products
+description: 'Select the Products where this Event should be displayed by typing in the Product name.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: adminstration_products
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

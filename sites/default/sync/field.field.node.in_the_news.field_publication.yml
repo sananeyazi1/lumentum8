@@ -1,0 +1,19 @@
+uuid: ab9f8c4b-3f12-406c-b9da-4801c14d9614
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publication
+    - node.type.in_the_news
+id: node.in_the_news.field_publication
+field_name: field_publication
+entity_type: node
+bundle: in_the_news
+label: Publication
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

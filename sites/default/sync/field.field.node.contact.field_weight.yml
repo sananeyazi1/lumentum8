@@ -1,0 +1,24 @@
+uuid: 4304d304-8375-4659-8134-2ebef30ca847
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_weight
+    - node.type.contact
+  module:
+    - weight
+id: node.contact.field_weight
+field_name: field_weight
+entity_type: node
+bundle: contact
+label: Weight
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings:
+  range: '50'
+field_type: weight

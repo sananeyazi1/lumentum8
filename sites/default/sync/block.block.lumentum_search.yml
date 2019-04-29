@@ -1,0 +1,22 @@
+uuid: 1604a325-6214-41f6-be66-b41924e122bb
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - lumentum
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: lumentum_search
+theme: lumentum
+region: header
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }

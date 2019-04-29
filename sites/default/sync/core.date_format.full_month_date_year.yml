@@ -1,0 +1,8 @@
+uuid: bac29e55-bcd1-4986-9366-82533bfa10f2
+langcode: en
+status: true
+dependencies: {  }
+id: full_month_date_year
+label: 'Full Month Date Year'
+locked: false
+pattern: 'F j, Y'

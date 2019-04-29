@@ -1,0 +1,23 @@
+uuid: 312bdff0-dd3b-432d-9b0c-f0c82de9d341
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_legacy_url
+    - node.type.event
+  module:
+    - link
+id: node.event.field_legacy_url
+field_name: field_legacy_url
+entity_type: node
+bundle: event
+label: 'Event Link'
+description: 'Enter a URL here where your Event title will link to'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

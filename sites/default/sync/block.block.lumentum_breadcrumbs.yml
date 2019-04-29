@@ -1,0 +1,22 @@
+uuid: 78a6a1d8-16f5-414d-8338-9ba56eb5624b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - lumentum
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: lumentum_breadcrumbs
+theme: lumentum
+region: sys_impo
+weight: -7
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

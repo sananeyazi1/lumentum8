@@ -1,0 +1,31 @@
+uuid: de5ab358-9ca8-4a55-8b75-bafe0330bbec
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page_with_banner.body
+    - node.type.landing_page_with_banner
+  module:
+    - text
+    - user
+id: node.landing_page_with_banner.teaser
+targetEntityType: node
+bundle: landing_page_with_banner
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

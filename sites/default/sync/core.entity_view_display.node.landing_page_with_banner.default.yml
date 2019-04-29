@@ -1,0 +1,118 @@
+uuid: f55e2b44-8d03-4c49-a845-6300bbe98abf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page_with_banner.body
+    - field.field.node.landing_page_with_banner.field_banner_image
+    - field.field.node.landing_page_with_banner.field_brightcove_video
+    - field.field.node.landing_page_with_banner.field_content_block
+    - field.field.node.landing_page_with_banner.field_intro_text
+    - field.field.node.landing_page_with_banner.field_link
+    - field.field.node.landing_page_with_banner.field_metatag
+    - field.field.node.landing_page_with_banner.field_promo_page
+    - field.field.node.landing_page_with_banner.field_related_events
+    - field.field.node.landing_page_with_banner.field_related_literature
+    - field.field.node.landing_page_with_banner.field_related_news
+    - node.type.landing_page_with_banner
+  module:
+    - entity_reference_revisions
+    - link
+    - metatag
+    - text
+    - user
+id: node.landing_page_with_banner.default
+targetEntityType: node
+bundle: landing_page_with_banner
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_brightcove_video:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_content_block:
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_intro_text:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_link:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_metatag:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_promo_page:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_related_events:
+    weight: 7
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_related_literature:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_related_news:
+    weight: 8
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_banner_image: true
+  langcode: true

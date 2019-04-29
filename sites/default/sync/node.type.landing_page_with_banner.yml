@@ -1,0 +1,18 @@
+uuid: 3356edb1-d950-45ae-aab2-7cf5c0485490
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Landing Page with Banner'
+type: landing_page_with_banner
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,11 @@
+uuid: 80c2d535-5e7a-4c92-80dd-2adf36b5d0ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.webform_pdf
+id: node.webform_pdf
+target_entity_type_id: node
+target_bundle: webform_pdf
+default_langcode: site_default
+language_alterable: false

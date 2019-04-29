@@ -1,0 +1,9 @@
+uuid: 6bcdb4c2-8fc2-4524-98ab-3d6beb2f7123
+langcode: en
+status: true
+dependencies: {  }
+id: hero_media
+label: 'Hero Media'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,35 @@
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% set total_count, count = items|length, 1 %}
+    {% for item in items %}
+      {% set expanded =  (item.is_expanded == true) ? 'expanded ' : '' %}
+      {% set item_classes =  (count == 1) ? 'first ' : (count == total_count) ? 'last ' : '' %}
+      <section>
+        <h3 class="{{ item_classes~expanded }}top-section"><a href="#">{{ item.title }}</a></h3>
+        {% if item.below %}
+        <div class="inner-menu">
+          <ul>
+            {% for below_item in item.below %}
+              {% set below_total_count, below_count = item.below|length, 1 %}
+              {% set below_item_classes =  (below_count == 1) ? 'first ' : (below_count == below_total_count) ? 'last ' : '' %}
+              <li class="{{ below_item_classes }}leaf child-level">
+                {{ link(below_item.title, below_item.url) }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </section>
+      {% set count = count+1 %}
+    {% endfor %}
+  {% endif %}
+{% endmacro %}

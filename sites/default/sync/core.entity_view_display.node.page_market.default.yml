@@ -1,0 +1,31 @@
+uuid: 259da785-0935-4532-81d9-ee1b7feba224
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page_market.body
+    - field.field.node.page_market.field_content_block
+    - field.field.node.page_market.field_hero_media
+    - field.field.node.page_market.field_metatag
+    - node.type.page_market
+  module:
+    - metatag
+    - user
+id: node.page_market.default
+targetEntityType: node
+bundle: page_market
+mode: default
+content:
+  field_metatag:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+hidden:
+  body: true
+  field_content_block: true
+  field_hero_media: true
+  langcode: true
+  links: true

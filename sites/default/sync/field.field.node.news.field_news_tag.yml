@@ -1,0 +1,32 @@
+uuid: 73a9d8c2-4381-49ec-b131-c4c70c856bdf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_tag
+    - node.type.custom_landing_page_with_banner
+    - node.type.landing_page_with_banner
+    - node.type.news
+    - node.type.page_market
+id: node.news.field_news_tag
+field_name: field_news_tag
+entity_type: node
+bundle: news
+label: 'News Tag'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      custom_landing_page_with_banner: custom_landing_page_with_banner
+      landing_page_with_banner: landing_page_with_banner
+      page_market: page_market
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: custom_landing_page_with_banner
+field_type: entity_reference

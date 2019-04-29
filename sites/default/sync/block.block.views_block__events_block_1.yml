@@ -1,0 +1,30 @@
+uuid: df13c4b4-7adb-4540-b12d-93d60648e788
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.events
+  module:
+    - system
+    - views
+  theme:
+    - lumentum
+id: views_block__events_block_1
+theme: lumentum
+region: after_content
+weight: -11
+provider: null
+plugin: 'views_block:events-block_1'
+settings:
+  id: 'views_block:events-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/media-room"
+    negate: false
+    context_mapping: {  }

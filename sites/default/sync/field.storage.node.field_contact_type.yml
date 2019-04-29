@@ -1,0 +1,33 @@
+uuid: 7d7b7597-0dd1-4bb9-96c4-ec77716831e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_contact_type
+field_name: field_contact_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: corporate
+      label: Corporate
+    -
+      value: customer_service_sales
+      label: 'Customer Service and Sales'
+    -
+      value: regional_sales
+      label: 'Regional Sales'
+    -
+      value: distributors
+      label: Distributors
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

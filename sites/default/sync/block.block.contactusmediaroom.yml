@@ -1,0 +1,31 @@
+uuid: b1a18550-6d9a-497a-b087-8a944fc2d228
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:507c414d-2d99-453c-b794-9b9a6600e97e'
+  module:
+    - block_content
+    - system
+  theme:
+    - lumentum
+id: contactusmediaroom
+theme: lumentum
+region: before_footer
+weight: -10
+provider: null
+plugin: 'block_content:507c414d-2d99-453c-b794-9b9a6600e97e'
+settings:
+  id: 'block_content:507c414d-2d99-453c-b794-9b9a6600e97e'
+  label: 'Contact Us - Media room '
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /media-room
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,11 @@
+uuid: ecc2e87f-44c9-4537-9122-7a0ba55f2c88
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.accordion_menu
+id: node.accordion_menu
+target_entity_type_id: node
+target_bundle: accordion_menu
+default_langcode: site_default
+language_alterable: false

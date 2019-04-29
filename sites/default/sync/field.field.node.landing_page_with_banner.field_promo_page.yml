@@ -1,0 +1,28 @@
+uuid: bd7437c8-eff1-42e2-9ddc-9dd4f3040218
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promo_page
+    - node.type.landing_page_with_banner
+    - node.type.promotion
+id: node.landing_page_with_banner.field_promo_page
+field_name: field_promo_page
+entity_type: node
+bundle: landing_page_with_banner
+label: 'Related Promos'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      promotion: promotion
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

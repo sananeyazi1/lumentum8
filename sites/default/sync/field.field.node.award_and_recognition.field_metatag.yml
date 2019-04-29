@@ -1,0 +1,21 @@
+uuid: bb5f31ef-a242-4eb4-ac68-bf229b1db793
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.award_and_recognition
+  module:
+    - metatag
+id: node.award_and_recognition.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: award_and_recognition
+label: Metatag
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

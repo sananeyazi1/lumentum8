@@ -1,0 +1,9 @@
+name: 'Lumentum Common alter'
+type: module
+description: 'Use for changes of variables to the site.'
+core: 8.x
+package: 'lumentum'
+dependencies:
+  - taxonomy
+  - views
+  - block

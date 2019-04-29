@@ -1,0 +1,11 @@
+uuid: fe1dc334-e603-4abf-9198-b1b6ee14d180
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.custom_landing_page_with_banner
+id: node.custom_landing_page_with_banner
+target_entity_type_id: node
+target_bundle: custom_landing_page_with_banner
+default_langcode: site_default
+language_alterable: false

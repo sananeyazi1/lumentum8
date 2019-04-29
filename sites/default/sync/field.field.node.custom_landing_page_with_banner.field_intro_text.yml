@@ -1,0 +1,21 @@
+uuid: ad029d9d-42a9-466c-b9bc-f46dd9517b93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro_text
+    - node.type.custom_landing_page_with_banner
+  module:
+    - text
+id: node.custom_landing_page_with_banner.field_intro_text
+field_name: field_intro_text
+entity_type: node
+bundle: custom_landing_page_with_banner
+label: 'Intro Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

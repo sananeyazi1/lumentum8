@@ -1,0 +1,31 @@
+uuid: db9451a2-d574-4f7c-8fcf-ecaf52f707d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_block
+    - node.type.page_market
+    - paragraphs.paragraphs_type.content_block
+  module:
+    - entity_reference_revisions
+id: node.page_market.field_content_block
+field_name: field_content_block
+entity_type: node
+bundle: page_market
+label: 'Content Block'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      content_block: content_block
+    target_bundles_drag_drop:
+      content_block:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

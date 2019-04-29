@@ -1,0 +1,19 @@
+uuid: b9462a67-587b-4a79-af73-ed63b40278fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_compatibility
+    - node.type.product
+id: node.product.field_compatibility
+field_name: field_compatibility
+entity_type: node
+bundle: product
+label: Compatibility
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: 73c76384-6106-4c25-8898-f52082eec028
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.banner_slider
+id: node.banner_slider.uid
+field_name: uid
+entity_type: node
+bundle: banner_slider
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

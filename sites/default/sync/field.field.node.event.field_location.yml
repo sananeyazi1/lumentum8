@@ -1,0 +1,27 @@
+uuid: 8fa773c0-258a-4e96-a66c-fd3195a1bbc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.event
+  module:
+    - address
+id: node.event.field_location
+field_name: field_location
+entity_type: node
+bundle: event
+label: 'Event Location'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    familyName:
+      override: optional
+  fields: {  }
+field_type: address

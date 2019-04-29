@@ -1,0 +1,27 @@
+uuid: bff1cbb7-7cdf-4e21-b967-3ae5d613972d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.office_location
+  module:
+    - address
+id: node.office_location.field_location
+field_name: field_location
+entity_type: node
+bundle: office_location
+label: 'Location Address'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    familyName:
+      override: optional
+  fields: {  }
+field_type: address

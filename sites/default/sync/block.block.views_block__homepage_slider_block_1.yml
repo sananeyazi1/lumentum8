@@ -1,0 +1,30 @@
+uuid: f861b9ff-2d3c-49ee-bcb4-8984f98ada3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.homepage_slider
+  module:
+    - system
+    - views
+  theme:
+    - lumentum
+id: views_block__homepage_slider_block_1
+theme: lumentum
+region: banner
+weight: -10
+provider: null
+plugin: 'views_block:homepage_slider-block_1'
+settings:
+  id: 'views_block:homepage_slider-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

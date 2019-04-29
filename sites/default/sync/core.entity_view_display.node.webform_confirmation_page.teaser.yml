@@ -1,0 +1,31 @@
+uuid: 39160839-8045-485a-8e02-2b2a2572b382
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.webform_confirmation_page.body
+    - node.type.webform_confirmation_page
+  module:
+    - text
+    - user
+id: node.webform_confirmation_page.teaser
+targetEntityType: node
+bundle: webform_confirmation_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

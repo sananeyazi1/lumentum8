@@ -1,0 +1,30 @@
+uuid: cd99379e-ce0b-4a1d-8736-db407b65dce5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.promotions
+  module:
+    - system
+    - views
+  theme:
+    - lumentum
+id: views_block__promotions_block_3
+theme: lumentum
+region: before_footer
+weight: -12
+provider: null
+plugin: 'views_block:promotions-block_3'
+settings:
+  id: 'views_block:promotions-block_3'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

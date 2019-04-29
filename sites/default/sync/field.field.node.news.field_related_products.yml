@@ -1,0 +1,25 @@
+uuid: 52422931-262f-4215-b151-98a1aa844184
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_products
+    - node.type.news
+id: node.news.field_related_products
+field_name: field_related_products
+entity_type: node
+bundle: news
+label: Products
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: adminstration_products
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

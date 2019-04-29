@@ -1,0 +1,11 @@
+uuid: a06c5c31-5944-4071-82c2-775968b3e019
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.leadership_position
+id: taxonomy_term.leadership_position
+target_entity_type_id: taxonomy_term
+target_bundle: leadership_position
+default_langcode: site_default
+language_alterable: false

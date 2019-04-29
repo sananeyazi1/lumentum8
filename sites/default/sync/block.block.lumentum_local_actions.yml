@@ -1,0 +1,20 @@
+uuid: 881fec1e-b450-46e9-ab41-adfd34c444fc
+langcode: en
+status: false
+dependencies:
+  theme:
+    - lumentum
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: lumentum_local_actions
+theme: lumentum
+region: sys_impo
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

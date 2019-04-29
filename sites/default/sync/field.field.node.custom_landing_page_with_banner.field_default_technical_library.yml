@@ -1,0 +1,28 @@
+uuid: 99510866-3944-4ff5-aae5-e7de7a7e3363
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_default_technical_library
+    - node.type.custom_landing_page_with_banner
+    - node.type.resource_center
+id: node.custom_landing_page_with_banner.field_default_technical_library
+field_name: field_default_technical_library
+entity_type: node
+bundle: custom_landing_page_with_banner
+label: 'Related Technical Library Item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      resource_center: resource_center
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

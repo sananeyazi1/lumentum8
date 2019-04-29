@@ -1,0 +1,9 @@
+uuid: 7cb3e735-2eba-487b-b99b-7950ea4b7130
+langcode: en
+status: true
+dependencies: {  }
+name: Products
+vid: products
+description: ''
+hierarchy: 1
+weight: -8

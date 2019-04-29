@@ -1,0 +1,37 @@
+uuid: a3981419-75bd-4600-b095-d1dc00ba23f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_block
+    - node.type.landing_page_with_banner
+    - paragraphs.paragraphs_type.content_block
+  module:
+    - entity_reference_revisions
+id: node.landing_page_with_banner.field_content_block
+field_name: field_content_block
+entity_type: node
+bundle: landing_page_with_banner
+label: 'Content Block'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      content_block: content_block
+    target_bundles_drag_drop:
+      content_block:
+        enabled: true
+        weight: 4
+      hero_media:
+        weight: 5
+        enabled: false
+      taxonomy_banner:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

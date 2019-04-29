@@ -1,0 +1,31 @@
+uuid: 5b1bb4a2-ada9-4bc8-930c-593b4ddd3343
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.award_and_recognition.body
+    - node.type.award_and_recognition
+  module:
+    - text
+    - user
+id: node.award_and_recognition.teaser
+targetEntityType: node
+bundle: award_and_recognition
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

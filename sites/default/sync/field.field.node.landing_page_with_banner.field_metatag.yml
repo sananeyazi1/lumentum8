@@ -1,0 +1,21 @@
+uuid: 0845d143-639f-44d4-9a5a-0959acf5e98c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_metatag
+    - node.type.landing_page_with_banner
+  module:
+    - metatag
+id: node.landing_page_with_banner.field_metatag
+field_name: field_metatag
+entity_type: node
+bundle: landing_page_with_banner
+label: Metatag
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

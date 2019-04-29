@@ -1,0 +1,20 @@
+uuid: 0d564edf-c309-44f9-a9f0-34c20df908c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.banner_slider
+  module:
+    - path
+id: node.banner_slider.path
+field_name: path
+entity_type: node
+bundle: banner_slider
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

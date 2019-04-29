@@ -1,0 +1,28 @@
+uuid: 6a3de8a6-25fd-4dfc-bd21-f9978aefb454
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_news
+    - node.type.landing_page_with_banner
+    - node.type.news
+id: node.landing_page_with_banner.field_related_news
+field_name: field_related_news
+entity_type: node
+bundle: landing_page_with_banner
+label: 'Related News'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      news: news
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

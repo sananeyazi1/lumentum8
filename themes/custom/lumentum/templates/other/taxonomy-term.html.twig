@@ -1,0 +1,179 @@
+<div id="taxonomy-term-{{ term.id }}" class="taxonomy-term {{ attributes.class ~ ' vocabulary-'~term.bundle }}">
+  {% if not page %}
+    <h2><a href="{{ url }}">{{ name }}</a></h2>
+  {% endif %}
+  <div class="content">
+    {% if taxo_content.taxonomy_banner.imges_arr.img is not empty %}
+    <section class="hero-banner">
+      {% if taxo_breadcrumbs is not empty %}
+        {{ taxo_breadcrumbs }}
+      {% endif %}
+      <img class="img-responsive" src="{{ taxo_content.taxonomy_banner.imges_arr.img }}" alt="{{ taxo_content.taxonomy_banner.imges_arr.alt }}" title="{{ taxo_content.taxonomy_banner.imges_arr.title }}">
+      <div class="row">
+        <div class="hero-caption column">
+          {% if taxo_content.taxonomy_banner.banner_caption is not empty %}
+            <h1>{{ taxo_content.taxonomy_banner.banner_caption }}</h1>
+          {% else %}
+            <h1>{{ taxo_title }}</h1>
+          {% endif %}
+          {% if taxo_content.taxonomy_banner.banner_link is not empty %}
+          <a href="{{ taxo_content.taxonomy_banner.banner_link.uri }}" class="button learn">
+            {{ taxo_content.taxonomy_banner.banner_link.title }} <i class="icon-angle-right"></i>
+          </a>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Markup for Contact Sales Link on Product Cateory page -->
+      {% if term.bundle == 'products' or term.bundle == 'applications' %}
+      <div class="contact js-sales-link-tab">{{ taxo_content.contact }}</div>
+      {% endif %}
+    </section>
+    {% endif %}
+    
+    {% if taxo_content.taxonomy_banner.imges_arr.img is empty %}
+      {% if taxo_breadcrumbs is not empty %}
+        {{ taxo_breadcrumbs }}
+      {% endif %}
+      <h1>{{ taxo_title }}</h1>
+    {% endif %}
+    
+    {% if taxo_messages is not empty %}
+      {{ taxo_messages }}
+    {% endif %}
+    
+    {% if taxo_local_tasks is not empty %}
+      {{ taxo_local_tasks }}
+    {% endif %}
+    
+    {% if content.description is not empty or  content.field_description_heading is not empty %}
+    <article class="row">
+      <div class="large-8 large-offset-2 columns">
+        <div class="body-content">
+          {% if content.field_description_heading is not empty %}
+            <h2>{{ content.field_description_heading }}</h2>
+          {% endif %}
+          
+          {% if content.description is not empty %}
+            {{ content.description|raw }}
+          {% endif %}
+        </div>  
+      </div>
+      {% if content.field_specs_table is not empty %}
+      <div class="specs-table column">
+        {{ content.field_specs_table|raw }}
+      </div>
+      {% endif %}
+    </article>
+    {% endif %}
+    
+    {% if term.bundle == 'applications_lab' %}
+      {% if content.field_content_labs is not empty %}
+      <article class="row">
+        <div class="large-8 large-offset-2 columns">
+          <div class="body-content">
+            {{ content.field_content_labs|raw }}
+          </div>
+        </div>
+      </article>
+      {% endif %}
+      
+      {% if promotions_block is not empty %}
+      <div class="pane-menu-wet-footer">
+        <div class="row">
+          <div class="large- columns">
+            <h2 class="view-promotions-heading">{{ promotions_block.title }}</h2>
+             {{ promotions_block.render }}
+          </div>
+          <div class="row icon-pdf literature-pdf-icon">
+            {{ literature_items_block.render }}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    {% endif %}
+    
+    {% if term.bundle == 'technical_library' %}
+    <article class="row">
+      <div class="large-8 large-offset-2 columns">
+      {% if technical_library_block_depth is not empty %}
+        {{ technical_library_block_depth }}
+      {% endif %}
+      </div>
+    </article>
+    {% if technical_library_block is not empty %}
+      {{ technical_library_block }}
+    {% endif %}
+    {% endif %}
+    
+    {% if product_block is not empty %}
+      <article class='row viewLinks'>
+      {{ product_block.0 }}
+      {{ product_block.1|raw }}
+      </article>
+    {% endif %}
+    
+    {% if product_block_all_link is not empty %}
+      <div class="all-products-link-wrapper">
+        <a class="all-products-link" href="{{ product_block_all_link }}">All Products</a>
+      </div>
+    {% endif %}
+    
+    {% if term.bundle == 'products' or term.bundle == 'applications' %}
+      {% if tech_count >= 1 or count_promo >= 1 or latest_news_count >= 1 or event_count >= 1 or news_releases_count >= 1 %}
+        {% set class_large_8, class_large_4 = 'large-8', 'large-4' %}
+      {% else %}
+        {% set class_large_8, class_large_4 = 'large-', 'large-' %}
+      {% endif %}
+      
+      {% if tech_count >= 1 or count_promo >= 1 or latest_news_count >= 1 or event_count >= 1 or news_releases_count >= 1 %}
+        <div class="div-footer">
+          <div class="row">
+            {% if tech_count >= 1 or count_promo >= 1 %}
+            <div class="{{ class_large_8~' columns' }}">
+              <!--  Related Information  -->
+              <div class="view-title">
+                <h2>{{ promo_block_title }}</h2>
+              </div>
+              <div class="div-separator"></div>
+                {{ promo_block_view_content }}
+              <div class="div-separator"></div>
+              <!--  Tech Library Items  -->
+              {{ tech_block_view_content }}
+            </div>
+            {% endif %}
+
+            <div class="{{ class_large_4~' columns' }}">
+              {% if news_releases_count >= 1 %}
+                <!--  Latest News Releases -->
+                <div class="view-title">
+                  <h2>{{ news_releases_block_title }} <i class="icon-angle-right"></i></h2>
+                </div>
+                <div class="div-separator"></div>
+                {{ news_releases_block_view_content }}
+              {% endif %}
+
+              {% if latest_news_count >= 1 %}
+                <!--  Latest News  -->
+                <div class="view-title">
+                  <h2>{{ news_block_title }} <i class="icon-angle-right"></i></h2>
+                </div>
+                <div class="div-separator"></div>
+                {{ news_block_view_content }}
+              {% endif %}
+
+              {% if event_count >= 1 %}
+                <!--  Next Event  -->
+                <div class="view-title">
+                  <h2>{{ event_block_title }} <i class="icon-angle-right"></i></h2>
+                </div>
+                <div class="div-separator"></div>
+                {{ event_block_view_content }}
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endif %} 
+    {% endif %}
+  </div>
+</div>

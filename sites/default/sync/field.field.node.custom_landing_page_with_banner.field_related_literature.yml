@@ -1,0 +1,28 @@
+uuid: 08991bf3-15c3-4b84-b50d-75458d59a17e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_literature
+    - node.type.custom_landing_page_with_banner
+    - node.type.literature_items
+id: node.custom_landing_page_with_banner.field_related_literature
+field_name: field_related_literature
+entity_type: node
+bundle: custom_landing_page_with_banner
+label: 'Related Literature'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      literature_items: literature_items
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

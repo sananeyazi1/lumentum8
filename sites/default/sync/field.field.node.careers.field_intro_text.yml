@@ -1,0 +1,21 @@
+uuid: 98db9c72-2f0e-4f06-b151-8be7dda86319
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intro_text
+    - node.type.careers
+  module:
+    - text
+id: node.careers.field_intro_text
+field_name: field_intro_text
+entity_type: node
+bundle: careers
+label: 'Intro Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

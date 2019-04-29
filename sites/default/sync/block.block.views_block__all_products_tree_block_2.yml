@@ -1,0 +1,30 @@
+uuid: 68cf31fc-0ea0-4bd5-883f-365ac46c14d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.all_products_tree
+  module:
+    - system
+    - views
+  theme:
+    - lumentum
+id: views_block__all_products_tree_block_2
+theme: lumentum
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:all_products_tree-block_2'
+settings:
+  id: 'views_block:all_products_tree-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /diode-lasers/all-products
+    negate: false
+    context_mapping: {  }

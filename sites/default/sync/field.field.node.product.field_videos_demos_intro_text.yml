@@ -1,0 +1,19 @@
+uuid: 8c174f26-bed9-4baa-82ef-d9519cb3a3b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_videos_demos_intro_text
+    - node.type.product
+id: node.product.field_videos_demos_intro_text
+field_name: field_videos_demos_intro_text
+entity_type: node
+bundle: product
+label: 'Videos/Demos Intro text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

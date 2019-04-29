@@ -1,0 +1,19 @@
+uuid: ca74c804-7f90-4c0e-9b0a-8eab30b60587
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_videos_demos_intro_text
+field_name: field_videos_demos_intro_text
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

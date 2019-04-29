@@ -1,0 +1,11 @@
+uuid: 84d7efd6-b4ae-4e86-9481-b3134117cd10
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.award_and_recognition
+id: node.award_and_recognition
+target_entity_type_id: node
+target_bundle: award_and_recognition
+default_langcode: site_default
+language_alterable: false

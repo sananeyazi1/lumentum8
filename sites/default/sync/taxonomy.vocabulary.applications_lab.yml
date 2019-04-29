@@ -1,0 +1,9 @@
+uuid: 298376e8-7ff7-40bc-9e44-c89fdddc05e0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Applications Lab'
+vid: applications_lab
+description: ''
+hierarchy: 0
+weight: -9

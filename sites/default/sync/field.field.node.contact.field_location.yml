@@ -1,0 +1,27 @@
+uuid: e508dea5-8e33-4e9a-a1bd-ccc830c3549c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.contact
+  module:
+    - address
+id: node.contact.field_location
+field_name: field_location
+entity_type: node
+bundle: contact
+label: 'Location Address'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    familyName:
+      override: optional
+  fields: {  }
+field_type: address

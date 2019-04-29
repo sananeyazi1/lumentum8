@@ -1,0 +1,56 @@
+uuid: 79c85929-9a56-4c45-a65e-e86fc9d5c59e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.top_banner
+  module:
+    - ctools
+    - views
+  theme:
+    - lumentum
+id: views_block__top_banner_block_1
+theme: lumentum
+region: banner
+weight: 0
+provider: null
+plugin: 'views_block:top_banner-block_1'
+settings:
+  id: 'views_block:top_banner-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      accordion_menu: accordion_menu
+      article: article
+      award_and_recognition: award_and_recognition
+      banner_slider: banner_slider
+      careers: careers
+      contact: contact
+      custom_landing_page_with_banner: custom_landing_page_with_banner
+      event: event
+      faq: faq
+      in_the_news: in_the_news
+      landing_page_with_banner: landing_page_with_banner
+      leadership_content: leadership_content
+      literature_items: literature_items
+      news: news
+      office_location: office_location
+      page: page
+      page_market: page_market
+      product: product
+      promotion: promotion
+      promotional_landing_page: promotional_landing_page
+      resource_center: resource_center
+      videos: videos
+      webform_confirmation_page: webform_confirmation_page
+      webform_pdf: webform_pdf
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

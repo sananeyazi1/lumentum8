@@ -1,0 +1,23 @@
+uuid: 4908c969-e5ac-4100-8abd-9fa818d494a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_link
+    - node.type.award_and_recognition
+  module:
+    - link
+id: node.award_and_recognition.field_link
+field_name: field_link
+entity_type: node
+bundle: award_and_recognition
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

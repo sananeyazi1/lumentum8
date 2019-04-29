@@ -1,0 +1,21 @@
+uuid: b11eb8bd-874e-4b2c-a874-cfeb8f24593d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_specs_table
+    - taxonomy.vocabulary.products
+  module:
+    - text
+id: taxonomy_term.products.field_specs_table
+field_name: field_specs_table
+entity_type: taxonomy_term
+bundle: products
+label: 'Specs Table'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

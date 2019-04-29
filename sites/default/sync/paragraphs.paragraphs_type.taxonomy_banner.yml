@@ -1,0 +1,9 @@
+uuid: 129e6a11-a631-453a-90c0-2f87aa5496ec
+langcode: en
+status: true
+dependencies: {  }
+id: taxonomy_banner
+label: 'Taxonomy Banner'
+icon_uuid: null
+description: 'Used for taxonomy banner above the pages.'
+behavior_plugins: {  }

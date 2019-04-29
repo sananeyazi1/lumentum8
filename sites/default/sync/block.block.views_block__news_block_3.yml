@@ -1,0 +1,30 @@
+uuid: 0c8ba776-4e42-40ab-8673-37a8ab4f7bcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.news
+  module:
+    - system
+    - views
+  theme:
+    - lumentum
+id: views_block__news_block_3
+theme: lumentum
+region: before_footer
+weight: -11
+provider: null
+plugin: 'views_block:news-block_3'
+settings:
+  id: 'views_block:news-block_3'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /media-room
+    negate: false
+    context_mapping: {  }

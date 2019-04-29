@@ -1,0 +1,31 @@
+uuid: d4794379-2e0f-45f6-a81f-ee987374e1e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.accordion_menu.body
+    - node.type.accordion_menu
+  module:
+    - text
+    - user
+id: node.accordion_menu.teaser
+targetEntityType: node
+bundle: accordion_menu
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

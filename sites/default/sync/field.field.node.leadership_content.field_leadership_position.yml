@@ -1,0 +1,29 @@
+uuid: 0ddd4434-9812-4d0d-babf-88baed2fd3b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_leadership_position
+    - node.type.leadership_content
+    - taxonomy.vocabulary.leadership_position
+id: node.leadership_content.field_leadership_position
+field_name: field_leadership_position
+entity_type: node
+bundle: leadership_content
+label: 'Leadership Position'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      leadership_position: leadership_position
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

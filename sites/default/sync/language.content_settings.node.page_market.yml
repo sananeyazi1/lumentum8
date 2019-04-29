@@ -1,0 +1,11 @@
+uuid: 3579cee7-dd3e-4059-9c91-7cfad079ba2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page_market
+id: node.page_market
+target_entity_type_id: node
+target_bundle: page_market
+default_langcode: site_default
+language_alterable: false

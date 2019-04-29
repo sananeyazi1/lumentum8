@@ -1,0 +1,59 @@
+uuid: c29c4660-c1bf-42d2-8d86-3ce7e95ba977
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.applications_lab.field_content_labs
+    - field.field.taxonomy_term.applications_lab.field_promotions
+    - field.field.taxonomy_term.applications_lab.field_related_literature
+    - field.field.taxonomy_term.applications_lab.field_taxonomy_banner
+    - taxonomy.vocabulary.applications_lab
+  module:
+    - entity_reference_revisions
+    - text
+id: taxonomy_term.applications_lab.default
+targetEntityType: taxonomy_term
+bundle: applications_lab
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content_labs:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_promotions:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_related_literature:
+    weight: 4
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_taxonomy_banner:
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+hidden:
+  langcode: true
